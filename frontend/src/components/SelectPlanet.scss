@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=KoHo:wght@200&display=swap");
+
 .selectPlanetDiv {
   width: 100vw;
   height: 30vw;
@@ -8,7 +10,16 @@
   .planetDiv {
     width: 25%;
     height: 100%;
-    border: 1px solid rgb(196, 196, 196);
+    .divTextPlanet {
+      margin-bottom: 43vh;
+      z-index: 1;
+      p {
+        color: rgb(255, 255, 255);
+        z-index: 4;
+        font-family: "KoHo", sans-serif;
+        font-size: 25px;
+      }
+    }
     .divCentrage {
       position: absolute;
       .divPlanet {
@@ -27,13 +38,15 @@
         .barre {
           width: 2px;
           height: 350px;
-          background: rgb(98, 98, 98);
+          background: rgb(87, 87, 87);
           position: absolute;
+          transition: height 1.3s;
         }
+
         #terraNova {
           border-radius: 50%;
           background-size: cover;
-          box-shadow: -20px -20px 50px 2px #000 inset, 0 0 20px #000;
+          box-shadow: -20px -20px 50px 2px #ffffff inset, 0 0 20px #ffffff;
           width: 280px;
           height: 280px;
           animation: spin 30s linear infinite;
@@ -42,20 +55,32 @@
           z-index: 1;
           &:hover {
             transition: 0.2s;
-            box-shadow: -20px -20px 50px 2px #ffffff inset, 0 0 20px #ffffff;
+            box-shadow: -20px -20px 50px 2px #50748f inset, 0 0 50px 2px #50748f;
           }
         }
       }
+    }
+    .divPlanet:hover .barre {
+      height: 220px;
+      transition: 0.2s;
     }
   }
 
   .planetDiv {
     width: 25%;
     height: 100%;
-    border: 1px solid rgb(196, 196, 196);
     display: flex;
     justify-content: center;
     align-items: center;
+    .divTextPlanet {
+      margin-bottom: 43vh;
+      z-index: 1;
+      p {
+        color: rgb(255, 255, 255);
+        z-index: 4;
+        font-family: "KoHo", sans-serif;
+      }
+    }
     .divCentrage {
       position: absolute;
       .divPlanet2 {
@@ -74,13 +99,14 @@
         .barre2 {
           width: 2px;
           height: 350px;
-          background: rgb(98, 98, 98);
+          background: rgb(87, 87, 87);
           position: absolute;
+          transition: height 1.3s;
         }
         #Pyrotopia {
           border-radius: 50%;
           background-size: cover;
-          box-shadow: -20px -20px 50px 2px #000 inset, 0 0 20px #000;
+          box-shadow: -20px -20px 50px 2px #ffffff inset, 0 0 20px #ffffff;
           width: 280px;
           height: 280px;
           animation: spin 30s linear infinite;
@@ -89,20 +115,33 @@
           z-index: 1;
           &:hover {
             transition: 0.2s;
-            box-shadow: -20px -20px 50px 2px #ffffff inset, 0 0 20px #ffffff;
+            box-shadow: -20px -20px 50px 2px #f5bc60a4 inset,
+              0 0 50px 2px #c98300;
           }
         }
       }
+    }
+    .divPlanet2:hover .barre2 {
+      height: 220px;
+      transition: 0.2s;
     }
   }
 
   .planetDiv {
     width: 25%;
     height: 100%;
-    border: 1px solid rgb(196, 196, 196);
     display: flex;
     justify-content: center;
     align-items: center;
+    .divTextPlanet {
+      margin-bottom: 43vh;
+      z-index: 1;
+      p {
+        color: rgb(255, 255, 255);
+        z-index: 4;
+        font-family: "KoHo", sans-serif;
+      }
+    }
     .divCentrage {
       position: absolute;
       .divPlanet3 {
@@ -121,13 +160,14 @@
         .barre3 {
           width: 2px;
           height: 350px;
-          background: rgb(98, 98, 98);
+          background: rgb(87, 87, 87);
           position: absolute;
+          transition: height 1.3s;
         }
         #Glaciara {
           border-radius: 50%;
           background-size: cover;
-          box-shadow: -20px -20px 50px 2px #000 inset, 0 0 20px #000;
+          box-shadow: -20px -20px 50px 2px #ffffff inset, 0 0 20px #ffffff;
           width: 280px;
           height: 280px;
           animation: spin 30s linear infinite;
@@ -136,19 +176,31 @@
           z-index: 1;
           &:hover {
             transition: 0.2s;
-            box-shadow: -20px -20px 50px 2px #ffffff inset, 0 0 20px #ffffff;
+            box-shadow: 0px 0px 50px 2px #bebebe inset, 0px 0px 50px 2px #bebebe;
           }
         }
       }
+    }
+    .divPlanet3:hover .barre3 {
+      height: 220px;
+      transition: 0.2s;
     }
   }
   .planetDiv {
     width: 25%;
     height: 100%;
-    border: 1px solid rgb(196, 196, 196);
     display: flex;
     justify-content: center;
     align-items: center;
+    .divTextPlanet {
+      margin-bottom: 40vh;
+      z-index: 1;
+      p {
+        color: rgb(255, 255, 255);
+        z-index: 4;
+        font-family: "KoHo", sans-serif;
+      }
+    }
     .divCentrage {
       position: absolute;
       .divPlanet4 {
@@ -167,25 +219,31 @@
         .barre4 {
           width: 2px;
           height: 350px;
-          background: rgb(98, 98, 98);
+          background: rgb(87, 87, 87);
           position: absolute;
+          transition: height 1.3s;
         }
         #Terraria {
           border-radius: 50%;
           background-size: cover;
-          box-shadow: -20px -20px 50px 2px #000 inset, 0 0 20px #000;
+          box-shadow: -20px -20px 50px 2px #ffffff inset, 0 0 20px #ffffff;
           width: 280px;
           height: 280px;
           animation: spin 30s linear infinite;
           transition: 1.3s ease-out;
-          background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1912b050-3675-4394-a3d1-d0b4cb43ae0a/dc0xuop-ac5e35b4-6161-4e76-b435-33bb43152aee.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE5MTJiMDUwLTM2NzUtNDM5NC1hM2QxLWQwYjRjYjQzYWUwYVwvZGMweHVvcC1hYzVlMzViNC02MTYxLTRlNzYtYjQzNS0zM2JiNDMxNTJhZWUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.uIXZxxoEh0y6TVYNA3kCU1hPcqXji0qz9QoIxUaxv38);
+          background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/06a094a4-7bd7-4bb9-b998-6c1e17f66c08/dbpxndx-6d4755a5-6af0-485f-9b30-538c56c5e946.jpg/v1/fill/w_1024,h_512,q_75,strp/io_truecolor_texture_map_8k_by_fargetanik_dbpxndx-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTEyIiwicGF0aCI6IlwvZlwvMDZhMDk0YTQtN2JkNy00YmI5LWI5OTgtNmMxZTE3ZjY2YzA4XC9kYnB4bmR4LTZkNDc1NWE1LTZhZjAtNDg1Zi05YjMwLTUzOGM1NmM1ZTk0Ni5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.EcyocvEiSTNxnDHsDTWG84rKfP_1QusxICjPv_kPhLU);
           z-index: 1;
           &:hover {
             transition: 0.2s;
-            box-shadow: -20px -20px 50px 2px #ffffff inset, 0 0 20px #ffffff;
+            box-shadow: -20px -20px 50px 2px #fffeaaa0 inset,
+              0 0 50px 2px #e0d27f;
           }
         }
       }
+    }
+    .divPlanet4:hover .barre4 {
+      height: 220px;
+      transition: 0.2s;
     }
   }
 }
