@@ -1,0 +1,21 @@
+.StepsGlobal {
+  display: flex;
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  gap: 5%;
+
+  #FirstColumns,
+  #SecondColumns,
+  #ThirdColumns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid red;
+    border-radius: 6px;
+    padding: 6px;
+    width: 100%;
+    height: 100%;
+  }
+}
