@@ -1,0 +1,197 @@
+.selectPlanetDiv {
+  width: 100vw;
+  height: 30vw;
+  background: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .planetDiv {
+    width: 25%;
+    height: 100%;
+    border: 1px solid rgb(196, 196, 196);
+    .divCentrage {
+      position: absolute;
+      .divPlanet {
+        border-radius: 50%;
+        width: 280px;
+        height: 280px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(-23deg);
+        transition: 1.3s;
+        &:hover {
+          transform: scale(110%);
+          transition: 0.2s;
+        }
+        .barre {
+          width: 2px;
+          height: 350px;
+          background: rgb(98, 98, 98);
+          position: absolute;
+        }
+        #terraNova {
+          border-radius: 50%;
+          background-size: cover;
+          box-shadow: -20px -20px 50px 2px #000 inset, 0 0 20px #000;
+          width: 280px;
+          height: 280px;
+          animation: spin 30s linear infinite;
+          transition: 1.3s ease-out;
+          background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/18fc9e8c-8d1d-4492-a808-d125b9310556/d7pxfv4-6a44b369-8c61-41c8-937b-432f356e5ec7.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE4ZmM5ZThjLThkMWQtNDQ5Mi1hODA4LWQxMjViOTMxMDU1NlwvZDdweGZ2NC02YTQ0YjM2OS04YzYxLTQxYzgtOTM3Yi00MzJmMzU2ZTVlYzcucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ee-eKe4cRDHjefvkVSp2FdJrh0kSKMU9FOsYQC3-5pk);
+          z-index: 1;
+          &:hover {
+            transition: 0.2s;
+            box-shadow: -20px -20px 50px 2px #ffffff inset, 0 0 20px #ffffff;
+          }
+        }
+      }
+    }
+  }
+
+  .planetDiv {
+    width: 25%;
+    height: 100%;
+    border: 1px solid rgb(196, 196, 196);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .divCentrage {
+      position: absolute;
+      .divPlanet2 {
+        border-radius: 50%;
+        width: 280px;
+        height: 280px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(10deg);
+        transition: 1.3s;
+        &:hover {
+          transform: scale(110%);
+          transition: 0.2s;
+        }
+        .barre2 {
+          width: 2px;
+          height: 350px;
+          background: rgb(98, 98, 98);
+          position: absolute;
+        }
+        #Pyrotopia {
+          border-radius: 50%;
+          background-size: cover;
+          box-shadow: -20px -20px 50px 2px #000 inset, 0 0 20px #000;
+          width: 280px;
+          height: 280px;
+          animation: spin 30s linear infinite;
+          transition: 1.3s ease-out;
+          background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/1c/Solarsystemscope_texture_8k_venus_surface.jpg);
+          z-index: 1;
+          &:hover {
+            transition: 0.2s;
+            box-shadow: -20px -20px 50px 2px #ffffff inset, 0 0 20px #ffffff;
+          }
+        }
+      }
+    }
+  }
+
+  .planetDiv {
+    width: 25%;
+    height: 100%;
+    border: 1px solid rgb(196, 196, 196);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .divCentrage {
+      position: absolute;
+      .divPlanet3 {
+        border-radius: 50%;
+        width: 280px;
+        height: 280px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(20deg);
+        transition: 1.3s;
+        &:hover {
+          transform: scale(110%);
+          transition: 0.2s;
+        }
+        .barre3 {
+          width: 2px;
+          height: 350px;
+          background: rgb(98, 98, 98);
+          position: absolute;
+        }
+        #Glaciara {
+          border-radius: 50%;
+          background-size: cover;
+          box-shadow: -20px -20px 50px 2px #000 inset, 0 0 20px #000;
+          width: 280px;
+          height: 280px;
+          animation: spin 30s linear infinite;
+          transition: 1.3s ease-out;
+          background-image: url(https://i.pinimg.com/originals/ee/7e/b3/ee7eb380d570674fb1a47c326c8687b2.jpg);
+          z-index: 1;
+          &:hover {
+            transition: 0.2s;
+            box-shadow: -20px -20px 50px 2px #ffffff inset, 0 0 20px #ffffff;
+          }
+        }
+      }
+    }
+  }
+  .planetDiv {
+    width: 25%;
+    height: 100%;
+    border: 1px solid rgb(196, 196, 196);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .divCentrage {
+      position: absolute;
+      .divPlanet4 {
+        border-radius: 50%;
+        width: 280px;
+        height: 280px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(-33deg);
+        transition: 1.3s;
+        &:hover {
+          transform: scale(110%);
+          transition: 0.2s;
+        }
+        .barre4 {
+          width: 2px;
+          height: 350px;
+          background: rgb(98, 98, 98);
+          position: absolute;
+        }
+        #Terraria {
+          border-radius: 50%;
+          background-size: cover;
+          box-shadow: -20px -20px 50px 2px #000 inset, 0 0 20px #000;
+          width: 280px;
+          height: 280px;
+          animation: spin 30s linear infinite;
+          transition: 1.3s ease-out;
+          background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1912b050-3675-4394-a3d1-d0b4cb43ae0a/dc0xuop-ac5e35b4-6161-4e76-b435-33bb43152aee.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE5MTJiMDUwLTM2NzUtNDM5NC1hM2QxLWQwYjRjYjQzYWUwYVwvZGMweHVvcC1hYzVlMzViNC02MTYxLTRlNzYtYjQzNS0zM2JiNDMxNTJhZWUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.uIXZxxoEh0y6TVYNA3kCU1hPcqXji0qz9QoIxUaxv38);
+          z-index: 1;
+          &:hover {
+            transition: 0.2s;
+            box-shadow: -20px -20px 50px 2px #ffffff inset, 0 0 20px #ffffff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes spin {
+  100% {
+    background-position: 100%;
+  }
+}
