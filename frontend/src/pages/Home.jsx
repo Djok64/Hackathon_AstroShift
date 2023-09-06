@@ -1,9 +1,13 @@
+import { Element } from "react-scroll"
+
 function Home() {
   return (
     <>
-      <div className="HomeGlobal">
-        <p>je suis sur Home</p>
-      </div>
+      <Element name="/">
+        <div className="HomeGlobal">
+          <p>je suis sur Home</p>
+        </div>
+      </Element>
     </>
   )
 }
