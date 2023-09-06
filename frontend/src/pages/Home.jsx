@@ -1,5 +1,6 @@
 import { Element } from "react-scroll"
 import Steps from "../components/Steps"
+import SystemeSolaire from "../components/SystemeSolaire"
 
 function Home() {
   return (
@@ -9,6 +10,9 @@ function Home() {
       </Element>
       <Element name="/presentation">
         <Steps />
+      </Element>
+      <Element name="/solarSystem">
+        <SystemeSolaire />
       </Element>
     </>
   )

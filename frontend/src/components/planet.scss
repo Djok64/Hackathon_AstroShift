@@ -329,15 +329,14 @@
     }
   }
   .titleH1Planet {
-    position: absolute;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #ffffff;
-    width: 40%;
+    width: 80%;
     height: 10%;
-    bottom: 2%;
+    transform: translateY(350%);
     border-radius: 20px;
     background: #cd656d;
     box-shadow: 20px 20px 60px #ae565d, -20px -20px 60px #ec747d;
