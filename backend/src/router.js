@@ -2,19 +2,13 @@ const express = require("express")
 
 const router = express.Router()
 
-const itemControllers = require("./controllers/itemControllers")
-const charactersControllers = require("./controllers/charactersControllers")
+const planetsControllers = require("./controllers/PlanetsControllers")
+const survivalItemsControllers = require("./controllers/SurvivalItemsControllers")
 
-router.get("/characters", charactersControllers.browse)
-router.get("/characters/:id", charactersControllers.read)
-router.post("/characters", charactersControllers.add)
-router.put("/characters/:id", charactersControllers.edit)
-router.delete("/characters/:id", charactersControllers.destroy)
+router.get("/planets", planetsControllers.browse)
+router.get("/planets/:id", planetsControllers.read)
 
-router.get("/items", itemControllers.browse)
-router.get("/items/:id", itemControllers.read)
-router.put("/items/:id", itemControllers.edit)
-router.post("/items", itemControllers.add)
-router.delete("/items/:id", itemControllers.destroy)
+router.get("/survivalItems", survivalItemsControllers.browse)
+router.get("/survivalItems/:id", survivalItemsControllers.read)
 
 module.exports = router
