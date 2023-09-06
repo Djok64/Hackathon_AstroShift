@@ -1,12 +1,10 @@
-import Home from "./pages/Home"
-
 import "./App.css"
+import SystemeSolaire from "./components/SystemeSolaire"
 
 function App() {
   return (
     <div className="App">
-      <Home />
-      <p>coucou</p>
+      <SystemeSolaire />
     </div>
   )
 }
