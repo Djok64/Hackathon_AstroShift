@@ -27,6 +27,7 @@
     ],
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
+    "react/props-validation": "off",
     "react/jsx-one-expression-per-line": "off",
     "react/no-unescaped-entities": "off",
     "jsx-a11y/click-events-have-key-events": "off",
