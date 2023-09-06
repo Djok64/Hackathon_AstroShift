@@ -1,0 +1,20 @@
+.NavBarGlobal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px 10px 20px;
+  #NavBarMenu {
+    display: flex;
+    gap: 50px;
+  }
+  #LogoNavBar {
+    width: 50%;
+    img {
+      width: 10%;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
