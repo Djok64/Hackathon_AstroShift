@@ -28,7 +28,9 @@
   "devDependencies": {
     "concurrently": "^7.6.0",
     "cross-env": "^7.0.3",
+    "eslint": "^8.48.0",
     "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-react": "^7.33.2",
     "husky": "^8.0.3"
   }
 }
