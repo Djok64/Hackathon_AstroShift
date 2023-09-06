@@ -1,12 +1,14 @@
 import { Element } from "react-scroll"
+import Steps from "../components/Steps"
 
 function Home() {
   return (
     <>
       <Element name="/">
-        <div className="HomeGlobal">
-          <p>je suis sur Home</p>
-        </div>
+        <p>je suis sur Home</p>
+      </Element>
+      <Element name="/presentation">
+        <Steps />
       </Element>
     </>
   )

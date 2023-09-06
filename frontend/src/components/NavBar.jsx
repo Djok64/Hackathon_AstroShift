@@ -11,6 +11,9 @@ function NavBar() {
         <ScrollLink to="/" smooth={true} duration={300}>
           <p>Accueil</p>
         </ScrollLink>
+        <ScrollLink to="/presentation">
+          <p>Présentation</p>
+        </ScrollLink>
         <ScrollLink to="/">
           <p>Système solaire</p>
         </ScrollLink>
