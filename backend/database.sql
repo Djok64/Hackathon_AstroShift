@@ -1,13 +1,13 @@
--- MySQL dump 10.13  Distrib 8.0.32, for macos13 (arm64)
+-- MySQL dump 10.13  Distrib 8.0.33, for Win64 (x86_64)
 --
--- Host: localhost    Database: harryBdd
+-- Host: 127.0.0.1    Database: shema_hachathon03
 -- ------------------------------------------------------
--- Server version	8.0.32
+-- Server version	8.0.33
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8mb4 */;
+/*!50503 SET NAMES utf8 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -16,117 +16,69 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Current Database: `harryBdd`
+-- Table structure for table `objetssurvie`
 --
 
-/*!40000 DROP DATABASE IF EXISTS `harryBdd`*/;
-
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `harryBdd` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-
-USE `harryBdd`;
-
---
--- Table structure for table `characters`
---
-
-DROP TABLE IF EXISTS `characters`;
+DROP TABLE IF EXISTS `objetssurvie`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `characters` (
+CREATE TABLE `objetssurvie` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `firstname` varchar(100) DEFAULT NULL,
-  `lastname` varchar(100) DEFAULT NULL,
+  `nom` varchar(255) NOT NULL,
+  `description` text,
+  `material` varchar(255) DEFAULT NULL,
+  `durability` varchar(50) DEFAULT NULL,
+  `weight` decimal(6,2) DEFAULT NULL,
+  `planet_id1` int NOT NULL,
   `imgUrl` varchar(255) DEFAULT NULL,
-  `houses_id` int NOT NULL,
-  PRIMARY KEY (`id`,`houses_id`),
-  KEY `fk_characters_houses_idx` (`houses_id`),
-  CONSTRAINT `fk_characters_houses` FOREIGN KEY (`houses_id`) REFERENCES `houses` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  PRIMARY KEY (`id`,`planet_id1`),
+  KEY `fk_objetssurvie_planet_idx` (`planet_id1`),
+  CONSTRAINT `fk_objetssurvie_planet` FOREIGN KEY (`planet_id1`) REFERENCES `planet` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=81 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `characters`
+-- Dumping data for table `objetssurvie`
 --
 
-LOCK TABLES `characters` WRITE;
-/*!40000 ALTER TABLE `characters` DISABLE KEYS */;
-INSERT INTO `characters` VALUES (1,'Harry','Potter','https://static.actu.fr/uploads/2023/01/25512-230106120939397-0.jpg',1),(2,'Hermione','Granger','https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Hermione_Granger_poster.jpg/220px-Hermione_Granger_poster.jpg',1),(3,'Drago','Malefoy','https://wingardium-leviosa.com/wp-content/uploads/2018/03/draco-malfoy-produit-baguette-magique.jpg',2),(5,'Ron','weasley','https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/Ron_Weasley_poster.jpg/220px-Ron_Weasley_poster.jpg',1);
-/*!40000 ALTER TABLE `characters` ENABLE KEYS */;
+LOCK TABLES `objetssurvie` WRITE;
+/*!40000 ALTER TABLE `objetssurvie` DISABLE KEYS */;
+INSERT INTO `objetssurvie` VALUES (41,'Filtre à eau','Filtre portable pour purifier l\'eau','Charbon actif','Moyen',0.50,1,NULL),(42,'Tente auto-déployable','Tente pour protection contre les éléments','Nylon','Moyen',4.50,1,NULL),(43,'Oxygène Booster','Supplément d\'oxygène portable','Aluminium','Moyen',1.50,1,NULL),(44,'Kit de nourriture','Nourriture adaptée à la faune locale','Divers','Faible',2.50,1,NULL),(45,'Lampe solaire','Lampe rechargeable via énergie solaire','Plastique','Moyen',0.80,1,NULL),(46,'Couteau multifonction','Outil polyvalent','Acier inoxydable','Élevé',0.30,1,NULL),(47,'Kit premiers soins','Essentiels médicaux pour urgences','Divers','Faible',1.20,1,NULL),(48,'Boussole','Navigation','Métal','Moyen',0.10,1,NULL),(49,'Cordage','Pour attachements ou pièges','Fibre','Moyen',0.40,1,NULL),(50,'Tablette de purification d\'eau','Pour purifier rapidement l\'eau','Chimique','Faible',0.05,1,NULL),(51,'Ventilateur portable','Refroidissement rapide','Plastique','Faible',1.00,2,NULL),(52,'Masque de protection','Protège contre les particules','Fibre filtrante','Moyen',0.20,2,NULL),(53,'Gourde isotherme','Maintient l\'eau fraîche','Acier inoxydable','Élevé',0.50,2,NULL),(54,'Sandales thermiques','Protection des pieds contre la chaleur','Caoutchouc','Moyen',0.70,2,NULL),(55,'Lunettes de protection','Protection contre lumière intense','Plastique polarisé','Moyen',0.10,2,NULL),(56,'Écran solaire en spray','Protection UV','Divers','Faible',0.30,2,NULL),(57,'Tente isolante','Tente réfléchissant la chaleur','Mylar','Moyen',4.80,2,NULL),(58,'Douche portable','Rafraîchissement rapide','Plastique','Faible',2.00,2,NULL),(59,'Cooling Suit','Combinaison refroidissante pour température élevée','Fibres spéciales','Élevé',3.00,2,NULL),(60,'Protection solaire','Crème haute protection','Divers','Faible',0.20,2,NULL),(61,'Gants chauffants','Protection contre le froid','Fibres thermiques','Élevé',0.30,3,NULL),(62,'Chauffage portable','Réchauffeur pour conditions froides','Aluminium','Moyen',1.80,3,NULL),(63,'Vêtement thermique','Vêtement pour température glaciale','Fibres thermiques','Élevé',2.50,3,NULL),(64,'Lunettes de protection UV','Protection contre réverbération','Plastique polarisé','Moyen',0.10,3,NULL),(65,'Chaufferettes instantanées','Chaleur d\'urgence','Chimique','Faible',0.20,3,NULL),(66,'Couverture thermique','Retient la chaleur corporelle','Mylar','Moyen',0.50,3,NULL),(67,'Stove portable','Cuisson dans conditions froides','Métal','Moyen',1.50,3,NULL),(68,'Pelles à neige compacte','Pour déplacer la neige','Aluminium','Élevé',0.90,3,NULL),(69,'Chaussures à crampons','Adhérence sur glace','Caoutchouc et acier','Élevé',1.20,3,NULL),(70,'Lampe frontale','Éclairage dans l\'obscurité','Plastique','Moyen',0.20,3,NULL),(71,'Parapluie solaire','Protection contre le soleil intense','Nylon','Faible',0.80,4,NULL),(72,'Kit d\'hygiène','Nécessaire pour l\'hygiène personnelle','Divers','Faible',1.00,4,NULL),(73,'Protection nasale','Protège de la poussière','Tissu filtrant','Moyen',0.05,4,NULL),(74,'Crème hydratante','Pour peau sèche','Divers','Faible',0.20,4,NULL),(75,'Masque hydratant','Hydratation du visage','Divers','Faible',0.10,4,NULL),(76,'Tente d\'ombre','Fournit de l\'ombre dans zones ensoleillées','Nylon','Moyen',4.70,4,NULL),(77,'Brume rafraîchissante','Rafraîchissement immédiat','Eau & Divers','Faible',0.30,4,NULL),(78,'Compresse d\'hydratation','Hydratation par voie cutanée','Chimique','Faible',0.10,4,NULL),(79,'Réserve d\'eau','Stockage d\'eau pour climats arides','Plastique','Moyen',1.20,4,NULL),(80,'Chapeau solaire','Protection contre le soleil','Tissu','Faible',0.30,4,NULL);
+/*!40000 ALTER TABLE `objetssurvie` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `houses`
+-- Table structure for table `planet`
 --
 
-DROP TABLE IF EXISTS `houses`;
+DROP TABLE IF EXISTS `planet`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `houses` (
+CREATE TABLE `planet` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `houseName` varchar(100) DEFAULT NULL,
-  `housePoint` int DEFAULT NULL,
+  `nom_planete` varchar(255) NOT NULL,
+  `type_planete` varchar(255) DEFAULT NULL,
+  `composition_atmosphere` varchar(255) DEFAULT NULL,
+  `presence_eau` tinyint(1) DEFAULT NULL,
+  `climat` varchar(255) DEFAULT NULL,
+  `temperature_moyenne` decimal(5,2) DEFAULT NULL,
+  `radiations` varchar(255) DEFAULT NULL,
+  `duree_orbitale` decimal(7,2) DEFAULT NULL,
+  `gravite` decimal(5,2) DEFAULT NULL,
+  `type_faune_flore` varchar(255) DEFAULT NULL,
+  `imgUrl` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `houses`
+-- Dumping data for table `planet`
 --
 
-LOCK TABLES `houses` WRITE;
-/*!40000 ALTER TABLE `houses` DISABLE KEYS */;
-INSERT INTO `houses` VALUES (1,'Grifondor',100),(2,'Serpentard',100);
-/*!40000 ALTER TABLE `houses` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `spells`
---
-
-DROP TABLE IF EXISTS `spells`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `spells` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `spellName` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `spells`
---
-
-LOCK TABLES `spells` WRITE;
-/*!40000 ALTER TABLE `spells` DISABLE KEYS */;
-/*!40000 ALTER TABLE `spells` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `spells_has_characters`
---
-
-DROP TABLE IF EXISTS `spells_has_characters`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `spells_has_characters` (
-  `spells_id` int NOT NULL,
-  `characters_id` int NOT NULL,
-  PRIMARY KEY (`spells_id`,`characters_id`),
-  KEY `fk_spells_has_characters_characters1_idx` (`characters_id`),
-  KEY `fk_spells_has_characters_spells1_idx` (`spells_id`),
-  CONSTRAINT `fk_spells_has_characters_characters1` FOREIGN KEY (`characters_id`) REFERENCES `characters` (`id`),
-  CONSTRAINT `fk_spells_has_characters_spells1` FOREIGN KEY (`spells_id`) REFERENCES `spells` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `spells_has_characters`
---
-
-LOCK TABLES `spells_has_characters` WRITE;
-/*!40000 ALTER TABLE `spells_has_characters` DISABLE KEYS */;
-/*!40000 ALTER TABLE `spells_has_characters` ENABLE KEYS */;
+LOCK TABLES `planet` WRITE;
+/*!40000 ALTER TABLE `planet` DISABLE KEYS */;
+INSERT INTO `planet` VALUES (1,'Terra Nova','Tellurique','Azote 78%, Oxygène 21%, Autres 1%',1,'Tempéré',25.50,'Faibles',365.25,9.81,'Diversifiée',NULL),(2,'Pyrotopia','Tellurique','Azote 76%, Oxygène 23%, Autres 1%',1,'Tropical',32.75,'Modérées',420.50,9.68,'Exotique',NULL),(3,'Glaciara','Tellurique','Azote 75%, Oxygène 24%, Autres 1%',1,'Froid',-10.20,'Élevées',300.75,10.12,'Simplifiée',NULL),(4,'Terraria','Tellurique','Azote 77%, Oxygène 22%, Autres 1%',1,'Aride',40.00,'Faibles',400.00,9.70,'Minimaliste',NULL);
+/*!40000 ALTER TABLE `planet` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -138,4 +90,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-12  2:40:41
+-- Dump completed on 2023-09-06 14:25:29
