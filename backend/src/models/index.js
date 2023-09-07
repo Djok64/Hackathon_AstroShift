@@ -29,8 +29,12 @@ pool.getConnection().catch(() => {
 
 const models = {}
 
+const ObjectsByPlanetManager = require("./objectsByPlanetManager")
 const PlanetsManager = require("./PlanetsManager")
 const SurvivalItemsManager = require("./SurvivalItemsManager")
+
+models.objectsByPlanet = new ObjectsByPlanetManager()
+models.objectsByPlanet.setDatabase(pool)
 
 models.planets = new PlanetsManager()
 models.planets.setDatabase(pool)
