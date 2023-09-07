@@ -13,8 +13,9 @@
     // border: 2px solid red;
     width: 100%;
     height: 100%;
+    position: relative;
+    overflow: hidden;
     #sun {
-      position: relative;
       // top: 10px;
       // left: 10px;
       width: 70px;
@@ -337,11 +338,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #000;
-    width: 100%;
+    margin-top: 7%;
+    padding: 10px;
+    color: #fff;
+    width: 80%;
     height: 15%;
-    // transform: translateY(420%);
-    background-color: #ffffff;
+    border-radius: 20px;
+    background: #714067;
+    box-shadow: 20px 20px 60px #603658, -20px -20px 60px #824a76;
   }
 }
 

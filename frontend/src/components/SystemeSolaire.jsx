@@ -64,7 +64,7 @@ function SystemeSolaire() {
             />
           </div>
           <div id="labelSystemeSolaire">
-            <label htmlFor="provenance">RENSEIGNEZ VOTRE ÂGE</label>
+            <label htmlFor="provenance">RENSEIGNEZ VOTRE PAYS D'ORIGINE</label>
             <input
               type="text"
               id="provenance"
