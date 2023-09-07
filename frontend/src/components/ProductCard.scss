@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=KoHo:wght@200&display=swap");
+
+.cardsContainer {
+  width: 100%;
+  height: auto;
+  background-color: rgb(233, 233, 233);
+  display: flex;
+  justify-content: space-between;
+  gap: 2vw;
+  flex-wrap: wrap;
+  padding: 0 10px 0 10px;
+  .divCardMain {
+    height: 380px;
+    width: 300px;
+    background: none;
+    border-radius: 12px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 1s;
+    &:hover {
+      transition: 0.5s;
+      box-shadow: 0px 0px 35px 5px rgba(144, 144, 144, 0.7);
+    }
+    .divProductImage {
+      width: 100%;
+      height: 270px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      img {
+        width: auto;
+        height: 100%;
+      }
+    }
+    .divProductDescription {
+      width: 100%;
+      height: auto;
+      h2 {
+        width: 100%;
+        text-align: center;
+        font-family: "KoHo", sans-serif;
+        font-weight: bold;
+      }
+    }
+    .divButtonBasket {
+      width: 100%;
+      height: auto;
+      transition: margin 1s, opacity 0.2s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      #panier {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 15px;
+        background-color: #181717;
+        outline-offset: -3px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        transition: 400ms;
+        width: 100px;
+        height: 40px;
+        transition: opacity 1s;
+        opacity: 0;
+        gap: 5px;
+      }
+
+      #panier .text {
+        color: white;
+        font-weight: 700;
+        font-size: 1em;
+        transition: 400ms;
+      }
+
+      #panier svg path {
+        transition: 400ms;
+      }
+
+      #panier:hover {
+        background-color: rgb(31, 180, 31);
+      }
+
+      #panier:hover .text {
+        color: #181717;
+      }
+
+      #panier:hover svg path {
+        fill: #181717;
+      }
+    }
+  }
+
+  .divCardMain:hover #panier {
+    transition: opacity 0.5s;
+    opacity: 1;
+  }
+}
