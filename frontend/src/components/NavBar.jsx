@@ -12,10 +12,14 @@ function NavBar() {
           <button
             type="button"
             aria-label="lien vers l'accueil"
-            onClick={() => {
-              const solarSystemElement = document.getElementById("/")
-              if (solarSystemElement) {
-                solarSystemElement.scrollIntoView({
+            onClick={(e) => {
+              e.preventDefault()
+              const headers = document.getElementById("/")
+              if (headers) {
+                setTimeout(() => {
+                  headers.focus()
+                }, 100)
+                headers.scrollIntoView({
                   behavior: "smooth",
                   block: "start",
                 })
@@ -31,12 +35,12 @@ function NavBar() {
             aria-label="lien vers Présentation"
             onClick={(e) => {
               e.preventDefault()
-              const solarSystemElement = document.getElementById("steps")
-              if (solarSystemElement) {
+              const presenting = document.getElementById("steps")
+              if (presenting) {
                 setTimeout(() => {
-                  solarSystemElement.focus()
+                  presenting.focus()
                 }, 100)
-                solarSystemElement.scrollIntoView({
+                presenting.scrollIntoView({
                   behavior: "smooth",
                   block: "start",
                 })
@@ -50,9 +54,13 @@ function NavBar() {
           <button
             type="button"
             aria-label="lien vers le formulaire de recensement"
-            onClick={() => {
+            onClick={(e) => {
+              e.preventDefault()
               const solarSystemElement = document.getElementById("solarSystem")
               if (solarSystemElement) {
+                setTimeout(() => {
+                  solarSystemElement.focus()
+                }, 100)
                 solarSystemElement.scrollIntoView({
                   behavior: "smooth",
                   block: "start",
@@ -67,10 +75,14 @@ function NavBar() {
           <button
             type="button"
             aria-label="lien vers la sélection de la planète"
-            onClick={() => {
-              const solarSystemElement = document.getElementById("selectPlanet")
-              if (solarSystemElement) {
-                solarSystemElement.scrollIntoView({
+            onClick={(e) => {
+              e.preventDefault()
+              const newPlanet = document.getElementById("selectPlanet")
+              if (newPlanet) {
+                setTimeout(() => {
+                  newPlanet.focus()
+                }, 100)
+                newPlanet.scrollIntoView({
                   behavior: "smooth",
                   block: "start",
                 })
