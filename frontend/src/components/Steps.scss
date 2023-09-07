@@ -7,6 +7,10 @@
   justify-content: center;
   height: 100vh;
   gap: 5%;
+  :focus {
+    background: black;
+    color: white;
+  }
 
   #FirstColumns,
   #SecondColumns,
@@ -22,13 +26,25 @@
     height: 50%;
     h2 {
       text-align: center;
-      font-size: 1.5vw;
+      font-size: 2.5rem;
       font-family: "Roboto", sans-serif;
+      &:focus {
+        background: black;
+        color: white;
+        font-style: bold;
+      }
     }
     p {
       text-align: justify;
-      font-size: 1vw;
+      font-size: 1.5rem;
       font-family: "Roboto", sans-serif;
+      font-style: normal;
+      &:focus {
+        background: black;
+        color: white;
+        font-weight: 900;
+        font-size: 1.5rem;
+      }
     }
   }
 }
