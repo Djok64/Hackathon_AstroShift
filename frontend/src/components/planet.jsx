@@ -3,6 +3,9 @@ import "./planet.scss"
 function Planet() {
   return (
     <div className="planetContainerCanvas">
+      <div className="titleH1Planet">
+        <h1>NOTRE ANCIEN SYSTEME SOLAIRE</h1>
+      </div>
       <div id="canvas">
         <div id="sun"></div>
         <div id="mercury"></div>
@@ -20,9 +23,6 @@ function Planet() {
         </div>
         <div id="uranus"></div>
         <div id="neptune"></div>
-      </div>
-      <div className="titleH1Planet">
-        <h1>NOTRE ANCIEN SYSTEME SOLAIRE</h1>
       </div>
     </div>
   )
