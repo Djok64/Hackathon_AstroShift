@@ -1,11 +1,12 @@
 // import axios from "axios"
 import PopupItem from "../components/PopupItem"
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import LogoCroix from "../assets/images/croix.png"
 
 export default function ProductCard({ selectedPlanet, objects }) {
   const [showPopup, setShowPopup] = useState(false)
   const [selectedProduct, setSelectedProduct] = useState("")
+  const buttonRef = useRef(null)
   // const [productInfos, setProductInfos] = useState(null)
 
   // useEffect(() => {
@@ -16,15 +17,25 @@ export default function ProductCard({ selectedPlanet, objects }) {
   //     })
   // }, [])
 
-  const displayPopup = (object) => {
-    setSelectedProduct(object)
-    setShowPopup(true)
+  const handleCloseEscape = (event) => {
+    if (event.key === "Escape") {
+      setShowPopup(false)
+    }
+  }
+  const handleKeyPressEnter = (event) => {
+    if (event.key === "Enter") {
+      buttonRef.current.click()
+    }
   }
 
-  const closePopup = () => {
-    setShowPopup(false)
-    setSelectedProduct(null)
-  }
+  useEffect(() => {
+    document.addEventListener("keydown", handleCloseEscape)
+    return () => {
+      document.removeEventListener("keydown", handleCloseEscape)
+    }
+  }, [])
+
+  console.info(objects)
 
   return (
     <>
@@ -33,23 +44,29 @@ export default function ProductCard({ selectedPlanet, objects }) {
           objects.map((object) => (
             <div
               className="divCardMain"
-              tabIndex="0"
               key={object.id}
-              onClick={displayPopup}
+              onClick={() => {
+                setSelectedProduct(object)
+                setShowPopup(true)
+              }}
             >
               <div className="divProductImage">
                 <img
-                  src={`${import.meta.env.VITE_BACKEND_URL}/${
-                    object.objectNom
-                  }`}
+                  src={`${import.meta.env.VITE_BACKEND_URL}/${object.imgUrl}`}
                   alt="image product"
                 />
               </div>
               <div className="divProductDescription">
-                <h2>{object.nom}</h2>
+                <h2
+                  ref={buttonRef}
+                  onKeyDown={handleKeyPressEnter}
+                  tabIndex="0"
+                >
+                  {object.nom}
+                </h2>
               </div>
               <div className="divButtonBasket">
-                <button type="button" id="panier">
+                <button type="button" id="panier" tabIndex="-1">
                   <svg
                     viewBox="0 0 16 16"
                     className="bi bi-cart-check"
@@ -68,7 +85,14 @@ export default function ProductCard({ selectedPlanet, objects }) {
           ))}
         {showPopup && (
           <div className="divPopup">
-            <div className="croix" onClick={closePopup}>
+            <div
+              className="croix"
+              onClick={() => {
+                setSelectedProduct(null)
+                setShowPopup(false)
+              }}
+              tabIndex="0"
+            >
               <img src={LogoCroix} alt="Close" />
             </div>
             <PopupItem
@@ -78,6 +102,7 @@ export default function ProductCard({ selectedPlanet, objects }) {
               durability={selectedProduct.durability}
               poids={selectedProduct.weight}
               image={selectedProduct.imgUrl}
+              price={selectedProduct.price}
             />
           </div>
         )}

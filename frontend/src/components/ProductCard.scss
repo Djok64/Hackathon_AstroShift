@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=KoHo:wght@200&display=swap");
 
+// :focus{
+//   border:5px solid blue;
+// }
 .cardsContainer {
   width: 100%;
   height: auto;
@@ -17,7 +20,12 @@
     margin: 10px;
     cursor: pointer;
     transition: 1s;
+    opacity: 1;
     &:hover {
+      transition: 0.5s;
+      box-shadow: 0px 0px 35px 5px rgba(144, 144, 144, 0.7);
+    }
+    &:focus {
       transition: 0.5s;
       box-shadow: 0px 0px 35px 5px rgba(144, 144, 144, 0.7);
     }
@@ -100,6 +108,15 @@
     transition: opacity 0.5s;
     opacity: 1;
   }
+
+  .divCardMain:focus-within {
+    transition: opacity 0.5s;
+    opacity: 1;
+    box-shadow: 0px 0px 35px 5px rgba(144, 144, 144, 0.7);
+    #panier {
+      opacity: 1;
+    }
+  }
 }
 
 .divPopup {
@@ -125,6 +142,10 @@
       height: 30px;
       cursor: pointer;
       &:hover {
+        transition: 0.5s;
+        transform: rotate(180deg);
+      }
+      &:focus {
         transition: 0.5s;
         transform: rotate(180deg);
       }

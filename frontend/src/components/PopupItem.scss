@@ -50,22 +50,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      .divPoids {
-        height: 100%;
-        width: 100%;
-        img {
-          width: 50px;
-          height: auto;
-        }
-      }
-      .divMateriaux {
-        height: 100%;
-        width: 100%;
-        img {
-          width: 50px;
-          height: auto;
-        }
-      }
+      .divMateriaux,
+      .divPrice,
+      .divPoids,
       .divDurability {
         height: 100%;
         width: 100%;

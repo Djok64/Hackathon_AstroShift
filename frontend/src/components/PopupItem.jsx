@@ -15,7 +15,6 @@ export default function PopupItem(props) {
         <div className="descriptionItem">
           <h2>{props.name}</h2>
           <p>{props.description}</p>
-          <p id="destination">Pour aller sur : planete1, planete2</p>
         </div>
         <div className="specsItem">
           <div className="divPoids">
@@ -29,6 +28,10 @@ export default function PopupItem(props) {
           <div className="divDurability">
             <img src={DurablityLogo} alt="" />
             <p>{props.durability}</p>
+          </div>
+          <div className="divPoids">
+            <img src={PoidsLogo} alt="" />
+            <p>{props.price} Crédits</p>
           </div>
         </div>
         <div className="buttonBuy">
