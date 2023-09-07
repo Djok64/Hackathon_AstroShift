@@ -39,6 +39,11 @@
       background: #ffffff;
       box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
       padding: 20px;
+
+      h1 {
+        width: 100%;
+        text-align: center;
+      }
       #labelSystemeSolaire {
         display: flex;
         justify-content: space-between;
@@ -52,7 +57,7 @@
         input {
           width: 80%;
           height: 100%;
-          border-radius: 20px;
+          border-radius: 10px;
         }
       }
       button {
@@ -63,8 +68,12 @@
         height: 10%;
         border-radius: 20px;
         color: #ffffff;
-        font-size: 1vw;
+        font-size: 1.5vw;
         cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          transform: scale(110%);
+        }
       }
     }
   }
