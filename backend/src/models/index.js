@@ -32,6 +32,7 @@ const models = {}
 const ObjectsByPlanetManager = require("./objectsByPlanetManager")
 const PlanetsManager = require("./PlanetsManager")
 const SurvivalItemsManager = require("./SurvivalItemsManager")
+const UsersManager = require("./UsersManager")
 
 models.objectsByPlanet = new ObjectsByPlanetManager()
 models.objectsByPlanet.setDatabase(pool)
@@ -41,6 +42,9 @@ models.planets.setDatabase(pool)
 
 models.survivalItems = new SurvivalItemsManager()
 models.survivalItems.setDatabase(pool)
+
+models.users = new UsersManager()
+models.users.setDatabase(pool)
 
 // bonus: use a proxy to personalize error message,
 // when asking for a non existing model
