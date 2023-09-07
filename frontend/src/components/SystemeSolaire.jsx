@@ -1,45 +1,58 @@
+import axios from "axios"
 import React, { useState } from "react"
 import Planet from "./planet.jsx"
 import "./SystemeSolaire.scss"
 
 function SystemeSolaire() {
-  // États locaux pour les champs du formulaire
-  const [nom, setNom] = useState("")
-  const [prenom, setPrenom] = useState("")
-  const [age, setAge] = useState("")
-  const [provenance, setProvenance] = useState("")
+  const [firstnameForm, setFirstnameForm] = useState("")
+  const [lastnameForm, setLastnameForm] = useState("")
+  const [ageForm, setAgeForm] = useState("")
+  const [homeCountryForm, setHomeCountryForm] = useState("")
 
-  // Fonction de gestionnaire pour soumettre le formulaire
-  const handleSubmit = (e) => {
+  const handleCreateUser = (e) => {
     e.preventDefault()
-
-    // Vous pouvez accéder aux valeurs des champs ici (nom, prenom, age, provenance)
-    console.info("Nom:", nom)
-    console.info("Prénom:", prenom)
-    console.info("Âge:", age)
-    console.info("Provenance:", provenance)
-
-    // Réinitialiser les champs après la soumission si nécessaire
-    setNom("")
-    setPrenom("")
-    setAge("")
-    setProvenance("")
+    axios
+      .post("http://localhost:4242/users", {
+        firstname: firstnameForm,
+        lastname: lastnameForm,
+        age: ageForm,
+        home_country: homeCountryForm,
+      })
+      .then((res) => {
+        if (res.status === 201) {
+          console.info("Utilisateur créé avec succès !")
+          // document.getElementById("formulaireSystemeSolaire").reset()
+          setFirstnameForm("")
+          setLastnameForm("")
+          setAgeForm("")
+          setHomeCountryForm("")
+        }
+      })
+      .catch((error) => {
+        console.error("Erreur lors de la création de l'utilisateur :", error)
+      })
   }
+
+  console.info("Prénom:", firstnameForm)
+  console.info("Nom:", lastnameForm)
+  console.info("Âge:", ageForm)
+  console.info("Provenance:", homeCountryForm)
+
   return (
     <div className="containerPlanet">
       <div className="planet">
         <Planet />
       </div>
       <div className="formulaireSystemeSolaireContainer">
-        <form onSubmit={handleSubmit} className="formulaireSystemeSolaire">
+        <form onSubmit={handleCreateUser} id="formulaireSystemeSolaire">
           <h1>FORMULAIRE DE RECENSEMENT</h1>
           <div id="labelSystemeSolaire">
             <label htmlFor="nom">ENTREZ VOTRE NOM</label>
             <input
               type="text"
               id="nom"
-              value={nom}
-              onChange={(e) => setNom(e.target.value)}
+              value={lastnameForm}
+              onChange={(e) => setLastnameForm(e.target.value)}
               required
             />
           </div>
@@ -48,18 +61,17 @@ function SystemeSolaire() {
             <input
               type="text"
               id="prenom"
-              value={prenom}
-              onChange={(e) => setPrenom(e.target.value)}
+              value={firstnameForm}
+              onChange={(e) => setFirstnameForm(e.target.value)}
               required
             />
           </div>
           <div id="labelSystemeSolaire">
             <label htmlFor="age">ENTREZ VOTRE AGE</label>
             <input
-              type="number"
               id="age"
-              value={age}
-              onChange={(e) => setAge(e.target.value)}
+              value={ageForm}
+              onChange={(e) => setAgeForm(e.target.value)}
               required
             />
           </div>
@@ -68,8 +80,8 @@ function SystemeSolaire() {
             <input
               type="text"
               id="provenance"
-              value={provenance}
-              onChange={(e) => setProvenance(e.target.value)}
+              value={homeCountryForm}
+              onChange={(e) => setHomeCountryForm(e.target.value)}
               required
             />
           </div>
