@@ -32,5 +32,9 @@
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-react": "^7.33.2",
     "husky": "^8.0.3"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "sass": "^1.66.1"
   }
 }

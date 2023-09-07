@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link as ScrollLink } from "react-scroll"
 import Logo from "../assets/images/logo.svg"
 
 function NavBar() {
@@ -8,18 +8,21 @@ function NavBar() {
         <img src={Logo} />
       </div>
       <div id="NavBarMenu">
-        <Link to="/">
+        <ScrollLink to="/" smooth={true} duration={300}>
           <p>Accueil</p>
-        </Link>
-        <Link to="/">
+        </ScrollLink>
+        <ScrollLink to="/presentation">
+          <p>Présentation</p>
+        </ScrollLink>
+        <ScrollLink to="/solarSystem">
           <p>Système solaire</p>
-        </Link>
-        <Link to="/">
+        </ScrollLink>
+        <ScrollLink to="/selectPlanet">
           <p>Planètes</p>
-        </Link>
-        <Link to="/">
+        </ScrollLink>
+        <ScrollLink to="/">
           <p>Panier</p>
-        </Link>
+        </ScrollLink>
       </div>
     </main>
   )
