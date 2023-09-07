@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px 10px 20px;
+  border-bottom: 3px solid grey;
   #NavBarMenu {
     display: flex;
     gap: 50px;
@@ -16,6 +17,7 @@
   a {
     text-decoration: none;
     color: black;
+    font-size: 1.5vw;
     cursor: pointer;
   }
 }

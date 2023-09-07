@@ -2,12 +2,13 @@ import { Element } from "react-scroll"
 import Steps from "../components/Steps"
 import SystemeSolaire from "../components/SystemeSolaire"
 import SelectPlanet from "../components/SelectPlanet"
+import Headers from "../components/headers"
 
 function Home() {
   return (
     <>
       <Element name="/">
-        <p>je suis sur Home</p>
+        <Headers />
       </Element>
       <Element name="/presentation">
         <Steps />
