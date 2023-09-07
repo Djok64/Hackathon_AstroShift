@@ -17,7 +17,7 @@ function NavBar() {
         <ScrollLink to="/solarSystem" smooth={true} duration={300}>
           <p>Système solaire</p>
         </ScrollLink>
-        <ScrollLink to="/" smooth={true} duration={300}>
+        <ScrollLink to="/selectPlanet" smooth={true} duration={300}>
           <p>Planètes</p>
         </ScrollLink>
         <ScrollLink to="/" smooth={true} duration={300}>
