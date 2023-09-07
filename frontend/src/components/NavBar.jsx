@@ -11,16 +11,16 @@ function NavBar() {
         <ScrollLink to="/" smooth={true} duration={300}>
           <p>Accueil</p>
         </ScrollLink>
-        <ScrollLink to="/presentation">
+        <ScrollLink to="/presentation" smooth={true} duration={300}>
           <p>Présentation</p>
         </ScrollLink>
-        <ScrollLink to="/solarSystem">
+        <ScrollLink to="/solarSystem" smooth={true} duration={300}>
           <p>Système solaire</p>
         </ScrollLink>
-        <ScrollLink to="/selectPlanet">
+        <ScrollLink to="/selectPlanet" smooth={true} duration={300}>
           <p>Planètes</p>
         </ScrollLink>
-        <ScrollLink to="/">
+        <ScrollLink to="/" smooth={true} duration={300}>
           <p>Panier</p>
         </ScrollLink>
       </div>
