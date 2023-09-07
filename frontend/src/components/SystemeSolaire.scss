@@ -27,6 +27,13 @@
     background-color: #ffffff;
     width: 50%;
     height: 100%;
+    :focus {
+      background: black;
+      color: white;
+      font-size: 25px;
+      font-weight: 900;
+    }
+
     #formulaireSystemeSolaire {
       display: flex;
       align-items: center;
