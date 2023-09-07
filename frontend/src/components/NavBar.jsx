@@ -14,7 +14,7 @@ function NavBar() {
         <ScrollLink to="/presentation">
           <p>Présentation</p>
         </ScrollLink>
-        <ScrollLink to="/">
+        <ScrollLink to="/solarSystem">
           <p>Système solaire</p>
         </ScrollLink>
         <ScrollLink to="/">
