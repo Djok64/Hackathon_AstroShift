@@ -1,7 +1,11 @@
 import { Link as ScrollLink } from "react-scroll"
+import { useContext } from "react"
+import myContext from "./useContext"
 import Logo from "../assets/images/logo.svg"
 
 function NavBar() {
+  const { setBasketPopup } = useContext(myContext)
+
   return (
     <main className="NavBarGlobal">
       <div id="LogoNavBar">
@@ -28,11 +32,13 @@ function NavBar() {
             Planètes
           </button>
         </ScrollLink>
-        <ScrollLink to="/" smooth={true} duration={300}>
-          <button type="button" name="lien vers le panier">
-            Panier
-          </button>
-        </ScrollLink>
+        <button
+          type="button"
+          name="lien vers le panier"
+          onClick={() => setBasketPopup(true)}
+        >
+          Panier
+        </button>
       </div>
     </main>
   )

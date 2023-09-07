@@ -13,8 +13,6 @@ export default function SelectPlanet() {
         setObjects(response.data)
       })
   }, [selectedPlanet]) // Maintenant, le useEffect sera déclenché à chaque fois que selectedPlanet change.
-  console.info("ICI", objects)
-  console.info(selectedPlanet)
 
   return (
     <>
