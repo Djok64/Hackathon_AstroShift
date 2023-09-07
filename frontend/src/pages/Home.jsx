@@ -2,7 +2,6 @@ import { Element } from "react-scroll"
 import Steps from "../components/Steps"
 import SystemeSolaire from "../components/SystemeSolaire"
 import SelectPlanet from "../components/SelectPlanet"
-import ProductCard from "../components/ProductCard"
 import Header from "../components/header"
 
 function Home() {
@@ -20,9 +19,6 @@ function Home() {
       <Element name="/selectPlanet">
         <SelectPlanet />
       </Element>
-      <div className="productCardDiv">
-        <ProductCard />
-      </div>
     </>
   )
 }
