@@ -17,7 +17,7 @@ function NavBar() {
         <ScrollLink to="/solarSystem">
           <p>Système solaire</p>
         </ScrollLink>
-        <ScrollLink to="/">
+        <ScrollLink to="/selectPlanet">
           <p>Planètes</p>
         </ScrollLink>
         <ScrollLink to="/">
