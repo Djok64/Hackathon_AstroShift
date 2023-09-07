@@ -10,7 +10,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid red;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -333,17 +332,17 @@
       }
     }
   }
-  // .titleH1Planet {
-  //   text-align: center;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
-  //   color: #000;
-  //   width: 100%;
-  //   height: 15%;
-  //   // transform: translateY(420%);
-  //   background-color: #ffffff;
-  // }
+  .titleH1Planet {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    width: 100%;
+    height: 15%;
+    // transform: translateY(420%);
+    background-color: #ffffff;
+  }
 }
 
 @keyframes mercury {
