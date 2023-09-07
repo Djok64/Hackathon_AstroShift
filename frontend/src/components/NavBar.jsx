@@ -14,20 +14,12 @@ function NavBar() {
           </button>
         </ScrollLink>
         <ScrollLink to="/presentation" smooth={true} duration={300}>
-          <button
-            type="button"
-            name="lien vers Présentation"
-            onClick={() => document.getElementById("steps").focus()}
-          >
+          <button type="button" name="lien vers Présentation">
             Présentation
           </button>
         </ScrollLink>
         <ScrollLink to="/solarSystem" smooth={true} duration={300}>
-          <button
-            type="button"
-            name="lien vers le formulaire de recensement"
-            onClick={() => document.getElementById("solarSystem").focus()}
-          >
+          <button type="button" name="lien vers le formulaire de recensement">
             Système solaire
           </button>
         </ScrollLink>
