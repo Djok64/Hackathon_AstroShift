@@ -7,6 +7,17 @@
   #NavBarMenu {
     display: flex;
     gap: 50px;
+    button {
+      background: none;
+      border: none;
+      font-size: 1rem;
+    }
+    button:focus {
+      padding: 5px;
+      color: white;
+      background: black;
+      font-size: 2rem;
+    }
   }
   #LogoNavBar {
     width: 50%;
