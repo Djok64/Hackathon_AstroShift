@@ -10,7 +10,7 @@ class objectsByPlanetManager extends AbstractManager {
   findObjectsByPlanet(planetId) {
     return this.database.query(
       `
-      SELECT o.nom, o.imgUrl AS objectNom
+      SELECT o.nom, o.imgUrl, o.description, o.material, o.durability, o.weight, o.price
       FROM planet_has_objetssurvie pho
       JOIN objetssurvie o ON pho.objetssurvie_id = o.id
       WHERE pho.planet_id = ?
