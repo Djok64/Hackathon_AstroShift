@@ -6,9 +6,6 @@ import SelectPlanet from "../components/SelectPlanet"
 function Home() {
   return (
     <>
-      <Element name="/">
-        <p>je suis sur Home</p>
-      </Element>
       <Element name="/presentation">
         <Steps />
       </Element>
