@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import myContext from "./useContext"
-// import LogoCroix from "../assets/images/croix.png"
+import LogoCroix from "../assets/images/croix.png"
 
 export default function Basket() {
   const { setBasketPopup } = useContext(myContext)
@@ -26,9 +26,17 @@ export default function Basket() {
   //   setBasketPopup(false)
   // }
 
+  const closePopup = () => {
+    setBasketPopup(false)
+    // setSelectedProduct(null)
+  }
+
   return (
     <>
       <div id="BasketGlobal">
+        <div className="croix" onClick={closePopup}>
+          <img src={LogoCroix} alt="Close" />
+        </div>
         <p>je suis dans panier</p>
         <button onClick={() => setBasketPopup(false)}>le test ultime</button>
       </div>
