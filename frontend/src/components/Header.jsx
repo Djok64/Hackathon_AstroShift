@@ -1,5 +1,4 @@
 import { Link } from "react-scroll"
-import "./headers.scss"
 
 function Headers() {
   return (
