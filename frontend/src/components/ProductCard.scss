@@ -30,7 +30,9 @@
       padding: 10px;
       img {
         width: auto;
-        height: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
       }
     }
     .divProductDescription {
@@ -97,5 +99,35 @@
   .divCardMain:hover #panier {
     transition: opacity 0.5s;
     opacity: 1;
+  }
+}
+
+.divPopup {
+  height: 100%;
+  width: 100%;
+  border: 2px solid blue;
+  background-color: rgba(0, 0, 0, 0.437);
+  top: 0;
+  z-index: 40;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  .croix {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 30px;
+    height: fit-content;
+    width: fit-content;
+    img {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      &:hover {
+        transition: 0.5s;
+        transform: rotate(180deg);
+      }
+    }
   }
 }
