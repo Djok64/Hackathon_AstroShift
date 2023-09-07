@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
+import ProductCard from "./ProductCard"
 
 export default function SelectPlanet() {
   const [objects, setObjects] = useState([])
@@ -65,18 +66,7 @@ export default function SelectPlanet() {
       </div>
 
       <div>
-        {selectedPlanet &&
-          objects.map((object) => (
-            <div className="boxImageNTitle" key={object.id}>
-              <img
-                className="boxImageNTitle"
-                key={object.id}
-                src={`${import.meta.env.VITE_BACKEND_URL}/${object.objectNom}`}
-                alt={object.nom}
-              />
-              <p>{object.nom}</p>
-            </div>
-          ))}
+        <ProductCard selectedPlanet={selectedPlanet} objects={objects} />
       </div>
     </>
   )
