@@ -20,10 +20,9 @@ function Steps() {
       <img src={Arrow} />
       <div id="SecondColumns">
         <h2>DEUXIÈME ÉTAPE</h2>
-        <p>Bienvenue dans votre nouvelle vie avec AstroShift.</p>
         <p>
           Vous avez maintenant accès aux planètes disponibles dans le système et
-          à leur description.{" "}
+          à leur description.
         </p>
         <p>
           Avant de commencer votre voyage, consulter la liste des objets
@@ -39,7 +38,6 @@ function Steps() {
       <img src={Arrow} />
       <div id="ThirdColumns">
         <h2>TROISIÈME ÉTAPE</h2>
-        <p>Bienvenue dans votre nouvelle vie avec AstroShift.</p>
         <p>
           Maintenant que vous avez choisi votre planète et le contenu de votre
           sac, enregistrez-vous en nous donnant votre prénom et votre nom de
