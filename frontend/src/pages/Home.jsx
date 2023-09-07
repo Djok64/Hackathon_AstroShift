@@ -3,7 +3,7 @@ import Steps from "../components/Steps"
 import SystemeSolaire from "../components/SystemeSolaire"
 import SelectPlanet from "../components/SelectPlanet"
 import ProductCard from "../components/ProductCard"
-import Header from "../components/Header"
+import Header from "../components/header"
 
 function Home() {
   return (

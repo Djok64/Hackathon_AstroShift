@@ -1,6 +1,6 @@
 import { Link } from "react-scroll"
 
-function Headers() {
+function Header() {
   return (
     <div className="headersContainers">
       <div className="headersAstro">
@@ -18,4 +18,4 @@ function Headers() {
   )
 }
 
-export default Headers
+export default Header
