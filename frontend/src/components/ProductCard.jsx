@@ -9,6 +9,8 @@ export default function ProductCard({ selectedPlanet, objects }) {
   const handleCloseEscape = (event) => {
     if (event.key === "Escape") {
       setShowPopup(false)
+      const terraNova = document.getElementById("productCard")
+      terraNova.focus()
     }
   }
   const handleCardClick = (object) => {
