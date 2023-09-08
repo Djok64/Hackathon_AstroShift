@@ -33,11 +33,6 @@ function SystemeSolaire() {
       })
   }
 
-  console.info("Prénom:", firstnameForm)
-  console.info("Nom:", lastnameForm)
-  console.info("Âge:", ageForm)
-  console.info("Provenance:", homeCountryForm)
-
   return (
     <div
       className="containerPlanet"
