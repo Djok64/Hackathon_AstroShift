@@ -1,9 +1,18 @@
 import { Link as ScrollLink } from "react-scroll"
+import myContext from "./useContext"
 import Logo from "../assets/images/logo.svg"
+import React, { useContext } from "react"
+// import { Link as ScrollLink } from "react-scroll";
 
 function NavBar() {
+  const { setBasketPopup, isDyslexicFont, toggleFont } = useContext(myContext)
+
   return (
-    <main className="NavBarGlobal">
+    <main
+      className={`NavBarGlobal ${
+        isDyslexicFont ? "dyslexic-font" : "classicFont"
+      }`}
+    >
       <div id="LogoNavBar">
         <img src={Logo} alt="Logo du site AstroShift" />
       </div>
@@ -92,11 +101,16 @@ function NavBar() {
             Planètes
           </button>
         </ScrollLink>
-        <ScrollLink to="/" smooth={true} duration={300}>
-          <button type="button" aria-label="lien vers le panier">
-            Panier
-          </button>
-        </ScrollLink>
+        <button
+          type="button"
+          name="lien vers le panier"
+          onClick={() => setBasketPopup(true)}
+        >
+          Panier
+        </button>
+        <button type="button" onClick={toggleFont}>
+          Changer la police pour dyslexique
+        </button>
       </div>
     </main>
   )

@@ -30,8 +30,6 @@ export default function ProductCard({ selectedPlanet, objects }) {
     }
   }, [])
 
-  console.info(objects)
-
   return (
     <>
       <div
@@ -90,9 +88,11 @@ export default function ProductCard({ selectedPlanet, objects }) {
               }}
               tabIndex="0"
             >
-              <img src={LogoCroix} alt="Close" />
+              <button className="fermer" type="button">
+                <img src={LogoCroix} alt="" />
+                FERMER
+              </button>
             </div>
-
             <PopupItem
               name={selectedProduct.nom}
               description={selectedProduct.description}

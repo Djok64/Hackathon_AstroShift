@@ -17,8 +17,6 @@ export default function SelectPlanet() {
         setObjects(response.data)
       })
   }, [selectedPlanet])
-  console.info("ICI", objects)
-  console.info(selectedPlanet)
 
   const handleKeyPressEnter1 = (event) => {
     if (event.key === "Enter") {
