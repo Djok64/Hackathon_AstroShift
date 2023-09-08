@@ -11,7 +11,6 @@
   justify-content: space-between;
   gap: 2vw;
   flex-wrap: wrap;
-  padding: 0 10px 0 10px;
   .divCardMain {
     height: 380px;
     width: 300px;
@@ -124,31 +123,43 @@
   width: 100%;
   border: 2px solid blue;
   background-color: rgba(0, 0, 0, 0.437);
-  top: 0;
   z-index: 40;
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
-  .croix {
+  top: 0;
+  .fermer {
     position: absolute;
     top: 0;
     right: 0;
-    margin: 30px;
-    height: fit-content;
-    width: fit-content;
+    height: 40px;
+    width: 140px;
+    margin: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
     img {
-      width: 30px;
-      height: 30px;
+      width: 20px;
+      height: 20px;
       cursor: pointer;
-      &:hover {
-        transition: 0.5s;
-        transform: rotate(180deg);
-      }
       &:focus {
         transition: 0.5s;
         transform: rotate(180deg);
       }
     }
+    &:hover {
+      outline: none;
+      border: none;
+      background-color: rgb(241, 92, 92);
+    }
+  }
+  .fermer:hover img {
+    transition: 0.5s;
+    transform: rotate(180deg);
   }
 }
