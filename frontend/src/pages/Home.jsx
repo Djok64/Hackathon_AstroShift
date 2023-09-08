@@ -30,7 +30,9 @@ function Home() {
         <SystemeSolaire />
       </Element>
       <Element name="/selectPlanet">
-        <SelectPlanet />
+        <div className="selectPlanet">
+          <SelectPlanet />
+        </div>
       </Element>
       {basketPopup && (
         <div className="divPopup">

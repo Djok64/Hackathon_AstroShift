@@ -9,15 +9,14 @@
   background-color: rgb(233, 233, 233);
   display: flex;
   justify-content: space-between;
-  gap: 1vw;
+  gap: 10px;
   flex-wrap: wrap;
-  overflow: hidden;
   .divCardMain {
     height: 380px;
     width: 300px;
     background: none;
     border-radius: 12px;
-    margin: 30px;
+    margin: 10px;
     cursor: pointer;
     transition: 1s;
     opacity: 1;

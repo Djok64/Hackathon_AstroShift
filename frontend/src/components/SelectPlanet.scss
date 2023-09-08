@@ -7,6 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   .planetDiv {
     width: 25%;
     height: 100%;
@@ -46,7 +47,7 @@
         #terraNova {
           border-radius: 50%;
           background-size: cover;
-          box-shadow: -20px -20px 50px 2px #ffffff inset, 0 0 20px #ffffff;
+          box-shadow: -20px -20px 50px 2px #000000 inset, 0 0 20px #000000;
           width: 280px;
           height: 280px;
           animation: spin 30s linear infinite;
@@ -108,7 +109,7 @@
           cursor: pointer;
           border-radius: 50%;
           background-size: cover;
-          box-shadow: -20px -20px 50px 2px #ffffff inset, 0 0 20px #ffffff;
+          box-shadow: -20px -20px 50px 2px #000000 inset, 0 0 20px #000000;
           width: 280px;
           height: 280px;
           animation: spin 30s linear infinite;
@@ -170,7 +171,8 @@
           cursor: pointer;
           border-radius: 50%;
           background-size: cover;
-          box-shadow: -20px -20px 50px 2px #ffffff inset, 0 0 20px #ffffff;
+          box-shadow: -20px -20px 50px 2px #000000 inset, 0 0 20px #000000;
+
           width: 280px;
           height: 280px;
           animation: spin 30s linear infinite;
@@ -230,7 +232,8 @@
           cursor: pointer;
           border-radius: 50%;
           background-size: cover;
-          box-shadow: -20px -20px 50px 2px #ffffff inset, 0 0 20px #ffffff;
+          box-shadow: -20px -20px 50px 2px #000000 inset, 0 0 20px #000000;
+
           width: 280px;
           height: 280px;
           animation: spin 30s linear infinite;

@@ -43,6 +43,9 @@ export default function SelectPlanet() {
                   e.preventDefault()
                   setSelectedPlanet(1)
                   const terraNova = document.getElementById("productCard")
+                  if (selectedPlanet !== null) {
+                    setSelectedPlanet(null)
+                  }
                   if (terraNova) {
                     setTimeout(() => {
                       terraNova.focus()
@@ -75,6 +78,9 @@ export default function SelectPlanet() {
                   e.preventDefault()
                   setSelectedPlanet(1)
                   const Pyrotopia = document.getElementById("productCard")
+                  if (selectedPlanet !== null) {
+                    setSelectedPlanet(null)
+                  }
                   if (Pyrotopia) {
                     setTimeout(() => {
                       Pyrotopia.focus()
@@ -108,6 +114,9 @@ export default function SelectPlanet() {
                   e.preventDefault()
                   setSelectedPlanet(1)
                   const Glaciara = document.getElementById("productCard")
+                  if (selectedPlanet !== null) {
+                    setSelectedPlanet(null)
+                  }
                   if (Glaciara) {
                     setTimeout(() => {
                       Glaciara.focus()
@@ -139,6 +148,9 @@ export default function SelectPlanet() {
                   e.preventDefault()
                   setSelectedPlanet(1)
                   const Terraria = document.getElementById("productCard")
+                  if (selectedPlanet !== null) {
+                    setSelectedPlanet(null)
+                  }
                   if (Terraria) {
                     setTimeout(() => {
                       Terraria.focus()
