@@ -10,13 +10,16 @@
     button {
       background: none;
       border: none;
-      font-size: 1rem;
+      // font-size: 1.5vw;
+      cursor: pointer;
     }
     button:focus {
       padding: 5px;
       color: white;
       background: black;
-      font-size: 2rem;
+      border-radius: 5px;
+      padding: 5px;
+      // font-size: 2vw;
     }
   }
   #LogoNavBar {
@@ -30,7 +33,6 @@
     align-items: center;
     text-decoration: none;
     color: black;
-    font-size: 1.5vw;
-    cursor: pointer;
+    // font-size: 1.5vw;
   }
 }

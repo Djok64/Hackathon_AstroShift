@@ -1,12 +1,24 @@
-.productCardDiv {
-  width: 100%;
-  height: 100vh;
-}
-.popupItemDiv {
-  width: 100%;
-  height: 100vh;
-  border: 2px solid green;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+// .productCardDiv {
+//   width: 100%;
+//   height: 100vh;
+// }
+// .popupItemDiv {
+//   width: 100%;
+//   height: 100vh;
+//   border: 2px solid green;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+.newEra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+
+    h1 {
+        font-size: 4vw;
+    }
 }
