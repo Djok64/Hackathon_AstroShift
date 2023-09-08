@@ -2,10 +2,12 @@ import { Link } from "react-scroll"
 
 function Header() {
   return (
-    <div className="headersContainers" id="/">
+    <div className="headersContainers">
       <div className="headersAstro">
-        <h1>Bienvenue sur Astroshift</h1>
-        <p>
+        <h1 id="accueil" tabIndex="0">
+          Bienvenue sur Astroshift
+        </h1>
+        <p tabIndex="0">
           Afin que le voyage se déroule dans les meilleures conditions
           possibles, veuillez prendre connaissance des 3 étapes ci-dessous en
           cliquant sur le bouton. C’est le début de votre nouvelle vie...
