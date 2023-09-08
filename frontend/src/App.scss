@@ -1,39 +1,8 @@
-// * .dyslexic-font {
-//   margin: 0;
-//   padding: 0;
-//   box-sizing: border-box;
-//   font-family: "OpenDyslexic", sans-serif; /* Remplacez par votre police spéciale */
-
-//     @font-face{
-//     font-family: "OpenDyslexic";
-//     src: url(../src/assets/fonts/OpenDyslexic-Regular.otf);
-//     }
-
-//   button{
-//     font-family: "OpenDyslexic", sans-serif; /* Remplacez par votre police spéciale */
-//   }
-//   input{
-//     font-family: "OpenDyslexic", sans-serif; /* Remplacez par votre police spéciale */
-//   }
-// }
-
-// * .classicFont {
-//   margin: 0;
-//   padding: 0;
-//   box-sizing: border-box;
-//   font-family: 'Times New Roman', Times, serif;
-
-//   button{
-//     font-family: 'Times New Roman', Times, serif;
-//   }
-//   input{
-//     font-family: 'Times New Roman', Times, serif;
-//   }
-// }
-
-/* App.scss */
-
-/* Styles globaux pour toute l'application */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 /* Définition de la police pour la classe dyslexic-font */
 .dyslexic-font {
