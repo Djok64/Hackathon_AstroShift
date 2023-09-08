@@ -1,11 +1,22 @@
 import { Link as ScrollLink } from "react-scroll"
 import Logo from "../assets/images/logo.svg"
+import React, { useContext } from "react"
+// import { Link as ScrollLink } from "react-scroll";
+import { FontContext } from "../FontContext"
 
 function NavBar() {
+  const { isDyslexicFont, toggleFont } = useContext(FontContext)
+
   return (
-    <main className="NavBarGlobal">
+    <main
+      className={`NavBarGlobal ${
+        isDyslexicFont ? "dyslexic-font" : "classicFont"
+      }`}
+    >
       <div id="LogoNavBar">
+
         <img src={Logo} alt="Logo du site AstroShift" />
+
       </div>
       <div id="NavBarMenu">
         <ScrollLink to="/" smooth={true} duration={300}>
@@ -85,6 +96,9 @@ function NavBar() {
             Panier
           </button>
         </ScrollLink>
+        <button type="button" onClick={toggleFont}>
+          Changer la police pour dyslexique
+        </button>
       </div>
     </main>
   )
