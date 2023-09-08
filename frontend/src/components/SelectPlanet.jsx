@@ -43,7 +43,7 @@ export default function SelectPlanet() {
     <>
       <div
         className="selectPlanetDiv"
-        aria-label=""
+        aria-label="Les quatre planêtes disponible pour votre nouvelle vie"
         id="selectPlanet"
         tabIndex="0"
       >
@@ -56,7 +56,7 @@ export default function SelectPlanet() {
               <div className="barre"></div>
               <div
                 id="terraNova"
-                aria-label="Une représentation de la planète Terra Nova"
+                aria-label="Une représentation de la planète Terra Nova, une planète similaire en tout point avec la planète Terre"
                 onClick={(e) => {
                   e.preventDefault()
                   setSelectedPlanet(1)
@@ -87,7 +87,7 @@ export default function SelectPlanet() {
               <div className="barre2"></div>
               <div
                 id="Pyrotopia"
-                aria-label="Une représentation de la planète Pyrotopia"
+                aria-label="Une représentation de la planète Pyrotopia, une planète très chaude, la survie y est possible dans les infracstructe établie sous la surface"
                 tabIndex="0"
                 onClick={(e) => {
                   e.preventDefault()
@@ -118,7 +118,7 @@ export default function SelectPlanet() {
               <div className="barre3"></div>
               <div
                 id="Glaciara"
-                aria-label="Une représentation de la planète Glaciara"
+                aria-label="Une représentation de la planète Glaciara, une planète à l'atmosphère très froide, mais possède de nombre source géothermique, la survie y est donc plus aisé"
                 tabIndex="0"
                 ref={buttonRef3}
                 onKeyDown={handleKeyPressEnter3}
@@ -149,7 +149,7 @@ export default function SelectPlanet() {
               <div className="barre4"></div>
               <div
                 id="Terraria"
-                aria-label="Une représentation de la planète Terraria"
+                aria-label="Une représentation de la planète Terraria, planète de type aride, en surface, mais possède de nombreuses sources d'eau potable sous cette dernière"
                 tabIndex="0"
                 ref={buttonRef4}
                 onKeyDown={handleKeyPressEnter4}

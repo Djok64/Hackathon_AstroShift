@@ -15,12 +15,12 @@ export default function ProductCard({ selectedPlanet, objects }) {
     setSelectedProduct(object)
     setShowPopup(true)
 
-    const cardItem = document.getElementById("cardItem")
-    if (cardItem) {
-      setTimeout(() => {
+    requestAnimationFrame(() => {
+      const cardItem = document.getElementById("cardItem")
+      if (cardItem) {
         cardItem.focus()
-      }, 100)
-    }
+      }
+    })
   }
 
   useEffect(() => {
@@ -79,17 +79,16 @@ export default function ProductCard({ selectedPlanet, objects }) {
             </div>
           ))}
         {showPopup && (
-          <div className="divPopup">
+          <div className="divPopup" tabIndex="0" aria-label="Fermer la fenêtre">
             <div
               className="croix"
               onClick={() => {
                 setSelectedProduct(null)
                 setShowPopup(false)
               }}
-              tabIndex="0"
             >
               <button className="fermer" type="button">
-                <img src={LogoCroix} alt="" />
+                <img src={LogoCroix} alt="Une croix pour fermer la fenêtre" />
                 FERMER
               </button>
             </div>

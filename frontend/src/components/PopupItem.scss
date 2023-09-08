@@ -50,62 +50,62 @@
         flex-direction: column;
         gap: 6vh;
 
-      // h2 {
-      //   font-size: 50px;
-      // }
-      // p {
-      //   font-size: 30px;
-      // }
-      #destination {
-        color: yellow;
-      }
-    }
-    .specsItem {
-      height: 40%;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .divMateriaux,
-      .divPrice,
-      .divPoids,
-      .divDurability {
-        height: 100%;
-        width: 100%;
-        img {
-          width: 50px;
-          height: auto;
+        // h2 {
+        //   font-size: 50px;
+        // }
+        // p {
+        //   font-size: 30px;
+        // }
+        #destination {
+          color: yellow;
         }
       }
-    }
-    .buttonBuy {
-      height: 10%;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .button {
+      .specsItem {
+        height: 40%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 10px 15px;
-        gap: 15px;
-        background-color: #181717;
-        outline-offset: -3px;
-        border-radius: 5px;
-        border: none;
-        cursor: pointer;
-        transition: 400ms;
-        height: 50px;
-        width: 150px;
+        .divMateriaux,
+        .divPrice,
+        .divPoids,
+        .divDurability {
+          height: 100%;
+          width: 100%;
+          img {
+            width: 50px;
+            height: auto;
+          }
+        }
       }
+      .buttonBuy {
+        height: 10%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 10px 15px;
+          gap: 15px;
+          background-color: #181717;
+          outline-offset: -3px;
+          border-radius: 5px;
+          border: none;
+          cursor: pointer;
+          transition: 400ms;
+          height: 50px;
+          width: 150px;
+        }
 
-      .button .text {
-        color: white;
-        font-weight: 700;
-        // font-size: 1em;
-        transition: 400ms;
-      }
+        .button .text {
+          color: white;
+          font-weight: 700;
+          // font-size: 1em;
+          transition: 400ms;
+        }
 
         .button svg path {
           transition: 400ms;
