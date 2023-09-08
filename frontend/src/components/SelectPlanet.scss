@@ -177,7 +177,8 @@
           transition: 1.3s ease-out;
           background-image: url(https://i.pinimg.com/originals/ee/7e/b3/ee7eb380d570674fb1a47c326c8687b2.jpg);
           z-index: 1;
-          &:hover {
+          &:hover,
+          &:focus {
             transition: 0.2s;
             box-shadow: 0px 0px 50px 2px #bebebe inset, 0px 0px 50px 2px #bebebe;
           }
@@ -215,7 +216,8 @@
         align-items: center;
         transform: rotate(-33deg);
         transition: 1.3s;
-        &:hover {
+        &:hover,
+        &:focus {
           transform: scale(110%);
           transition: 0.2s;
         }
@@ -248,6 +250,38 @@
     .divPlanet4:hover .barre4 {
       height: 220px;
       transition: 0.2s;
+    }
+    .divPlanet4:focus-within {
+      transition: 1s;
+      transform: rotate(0deg);
+      transform: scale(110%);
+      .barre4 {
+        height: 220px;
+      }
+    }
+    .divPlanet:focus-within {
+      transition: 1s;
+      transform: rotate(0deg);
+      transform: scale(110%);
+      .barre {
+        height: 220px;
+      }
+    }
+    .divPlanet2:focus-within {
+      transition: 1s;
+      transform: rotate(0deg);
+      transform: scale(110%);
+      .barre2 {
+        height: 220px;
+      }
+    }
+    .divPlanet3:focus-within {
+      transition: 1s;
+      transform: rotate(0deg);
+      transform: scale(110%);
+      .barre3 {
+        height: 220px;
+      }
     }
   }
 }

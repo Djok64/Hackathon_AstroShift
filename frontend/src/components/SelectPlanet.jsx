@@ -5,7 +5,10 @@ import ProductCard from "./ProductCard"
 export default function SelectPlanet() {
   const [objects, setObjects] = useState([])
   const [selectedPlanet, setSelectedPlanet] = useState(null)
-  const buttonRef = useRef(null)
+  const buttonRef1 = useRef(null)
+  const buttonRef2 = useRef(null)
+  const buttonRef3 = useRef(null)
+  const buttonRef4 = useRef(null)
 
   useEffect(() => {
     axios
@@ -17,9 +20,24 @@ export default function SelectPlanet() {
   console.info("ICI", objects)
   console.info(selectedPlanet)
 
-  const handleKeyPressEnter = (event) => {
+  const handleKeyPressEnter1 = (event) => {
     if (event.key === "Enter") {
-      buttonRef.current.click()
+      buttonRef1.current.click()
+    }
+  }
+  const handleKeyPressEnter2 = (event) => {
+    if (event.key === "Enter") {
+      buttonRef2.current.click()
+    }
+  }
+  const handleKeyPressEnter3 = (event) => {
+    if (event.key === "Enter") {
+      buttonRef3.current.click()
+    }
+  }
+  const handleKeyPressEnter4 = (event) => {
+    if (event.key === "Enter") {
+      buttonRef4.current.click()
     }
   }
 
@@ -56,8 +74,8 @@ export default function SelectPlanet() {
                   }
                 }}
                 tabIndex="0"
-                ref={buttonRef}
-                onKeyDown={handleKeyPressEnter}
+                ref={buttonRef1}
+                onKeyDown={handleKeyPressEnter1}
               ></div>
             </div>
           </div>
@@ -75,7 +93,7 @@ export default function SelectPlanet() {
                 tabIndex="0"
                 onClick={(e) => {
                   e.preventDefault()
-                  setSelectedPlanet(1)
+                  setSelectedPlanet(2)
                   const Pyrotopia = document.getElementById("productCard")
                   if (Pyrotopia) {
                     setTimeout(() => {
@@ -87,8 +105,8 @@ export default function SelectPlanet() {
                     })
                   }
                 }}
-                ref={buttonRef}
-                onKeyDown={handleKeyPressEnter}
+                ref={buttonRef2}
+                onKeyDown={handleKeyPressEnter2}
               ></div>
             </div>
           </div>
@@ -104,11 +122,11 @@ export default function SelectPlanet() {
                 id="Glaciara"
                 aria-label="Une représentation de la planète Glaciara"
                 tabIndex="0"
-                ref={buttonRef}
-                onKeyDown={handleKeyPressEnter}
+                ref={buttonRef3}
+                onKeyDown={handleKeyPressEnter3}
                 onClick={(e) => {
                   e.preventDefault()
-                  setSelectedPlanet(1)
+                  setSelectedPlanet(3)
                   const Glaciara = document.getElementById("productCard")
                   if (Glaciara) {
                     setTimeout(() => {
@@ -135,11 +153,11 @@ export default function SelectPlanet() {
                 id="Terraria"
                 aria-label="Une représentation de la planète Terraria"
                 tabIndex="0"
-                ref={buttonRef}
-                onKeyDown={handleKeyPressEnter}
+                ref={buttonRef4}
+                onKeyDown={handleKeyPressEnter4}
                 onClick={(e) => {
                   e.preventDefault()
-                  setSelectedPlanet(1)
+                  setSelectedPlanet(4)
                   const Terraria = document.getElementById("productCard")
                   if (Terraria) {
                     setTimeout(() => {
