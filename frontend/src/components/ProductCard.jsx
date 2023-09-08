@@ -1,17 +1,22 @@
 import PopupItem from "../components/PopupItem"
 import { useState, useEffect, useRef } from "react"
+// import myContext from "./useContext"
 import LogoCroix from "../assets/images/croix.png"
 
 export default function ProductCard({ selectedPlanet, objects }) {
   const [showPopup, setShowPopup] = useState(false)
   const [selectedProduct, setSelectedProduct] = useState("")
   const buttonRef = useRef(null)
+  // const { addToCart } = useContext(myContext)
 
   const handleCloseEscape = (event) => {
     if (event.key === "Escape") {
       setShowPopup(false)
     }
   }
+
+  // console.info(selectedProduct)
+
   const handleKeyPressEnter = (event) => {
     if (event.key === "Enter") {
       buttonRef.current.click()
@@ -62,7 +67,14 @@ export default function ProductCard({ selectedPlanet, objects }) {
                 </h2>
               </div>
               <div className="divButtonBasket">
-                <button type="button" id="panier" tabIndex="-1">
+                <button
+                  type="button"
+                  id="panier"
+                  tabIndex="-1"
+                  // onClick={() => {
+                  //   addToCart(selectedProduct)
+                  // }}
+                >
                   <svg
                     viewBox="0 0 16 16"
                     className="bi bi-cart-check"

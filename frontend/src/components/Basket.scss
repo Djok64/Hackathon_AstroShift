@@ -1,43 +1,129 @@
 #overlay {
-  // Il est fixé à l'écran, il ne bougera pas même si on scroll.
   position: fixed;
-  // On le positionne dans le coin supérieur gauche.
   top: 0;
   left: 0;
-  // Il prend toute la largeur et la hauteur de l'écran.
   width: 100%;
   height: 100%;
-  // Son fond est semi-transparent (noir avec une opacité à 70%).
   background: rgba(0, 0, 0, 0.7);
-  // On lui donne un z-index élevé pour qu'il apparaisse au-dessus des autres éléments.
   z-index: 1000;
-  // On centre son contenu horizontalement et verticalement.
   display: flex;
   justify-content: center;
   align-items: center;
 
-  // Pour s'assurer que le click sur le panier ne ferme pas la popup
-  // Les éléments enfant de #overlay (comme #BasketGlobal) seront cliquables, mais pas l'overlay lui-même.
   & > #BasketGlobal {
     pointer-events: auto;
   }
 }
-// On définie les styles pour la pop-up elle-même.
+
 #BasketGlobal {
-  // La largeur de la pop-up est de 80% de l'overlay, mais ne dépassera pas 500px.
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
   width: 80%;
   max-width: 1250px;
-  // On ajoute un peu de marge interne
   padding: 20px;
-  // Le fond est blanc.
-  background-color: white;
-  // Les coins sont légèrement arrondis.
+  background-color: rgb(54, 52, 52);
+  color: #fff;
   border-radius: 10px;
-  // On lui donne une petite ombre pour un effet de profondeur.
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  // On désactive les événements de pointeur pour ce div. Cela signifie qu'il ne sera
-  // pas "cliquable", ce qui est nécessaire pour notre logique dans handleOverlayClick.
-  pointer-events: none; // Pour éviter le click sur le contenu
-}
+  pointer-events: none;
 
-// La partie la plus cruciale de ce code est l'utilisation de pointer-events. En désactivant les événements de pointeur pour la pop-up (#BasketGlobal), nous nous assurons que lorsque nous cliquons à l'intérieur de la pop-up, le clic est en fait détecté par l'overlay (#overlay). Cela nous permet de fermer la pop-up en cliquant en dehors de celle-ci. Mais en définissant pointer-events: auto; pour & > #BasketGlobal, nous nous assurons que les éléments à l'intérieur de la pop-up (comme le bouton) restent interactifs.
+  #orderIsValidate {
+    margin-top: 10px;
+    font-size: 30px;
+    color: green;
+  }
+
+  #impossibleOrder {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+  }
+  h2 {
+    font-size: 2vw;
+  }
+
+  #solde {
+    text-align: right;
+    font-weight: bold;
+    font-size: 1vw;
+    border-bottom: 1px solid #fff;
+    // border: 2px solid red;
+  }
+
+  #soldeRestant {
+    font-weight: bold;
+    border-bottom: 1px solid #fff;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style-type: none;
+    width: 90%;
+    gap: 30px;
+    // border: 2px solid red;
+    #basketProductImage {
+      width: 100px;
+      aspect-ratio: 3/2;
+      // border: 2px solid red;
+    }
+    #basketProductList {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      gap: 20px;
+      // border: 2px solid red;
+      .nameProduct,
+      .priceProduct,
+      .descriptionProduct {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+
+        // border: 2px solid red;
+      }
+      #interlineBasket {
+        width: 25%;
+        height: 1px;
+        background-color: #fff;
+      }
+    }
+    li {
+      gap: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      // border: 2px solid red;
+      img {
+        width: 100%;
+        aspect-ratio: 3/2;
+      }
+    }
+    .buttonBasket {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      // border: 2px solid red;
+      button {
+        width: 40%;
+        border: none;
+        background: #fff;
+        border-radius: 10px;
+        // border: 2px solid red;
+        font-size: 1.5vw;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        &:hover {
+          transform: scale(110%);
+        }
+      }
+    }
+  }
+}
