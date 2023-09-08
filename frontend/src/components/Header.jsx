@@ -2,7 +2,7 @@ import { Link } from "react-scroll"
 
 function Header() {
   return (
-    <div className="headersContainers">
+    <div className="headersContainers" id="/">
       <div className="headersAstro">
         <h1>Bienvenue sur Astroshift</h1>
         <p>
