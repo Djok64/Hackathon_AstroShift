@@ -1,8 +1,10 @@
 import axios from "axios"
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef, useContext } from "react"
 import ProductCard from "./ProductCard"
+import myContext from "./useContext"
 
 export default function SelectPlanet() {
+  const { setBasketPopup } = useContext(myContext)
   const [objects, setObjects] = useState([])
   const [selectedPlanet, setSelectedPlanet] = useState(null)
   const buttonRef1 = useRef(null)
@@ -181,7 +183,7 @@ export default function SelectPlanet() {
         <ProductCard selectedPlanet={selectedPlanet} objects={objects} />
       </div>
       <div className="valideBasket">
-        <button type="button" tabIndex="0">
+        <button type="button" tabIndex="0" onClick={() => setBasketPopup(true)}>
           Valider votre panier
         </button>
       </div>

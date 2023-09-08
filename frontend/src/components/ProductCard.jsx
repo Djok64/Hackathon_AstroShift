@@ -1,5 +1,6 @@
 import PopupItem from "../components/PopupItem"
 import { useState, useEffect } from "react"
+// import myContext from "./useContext"
 import LogoCroix from "../assets/images/croix.png"
 
 export default function ProductCard({ selectedPlanet, objects }) {
@@ -63,7 +64,14 @@ export default function ProductCard({ selectedPlanet, objects }) {
                 <h2>{object.nom}</h2>
               </div>
               <div className="divButtonBasket">
-                <button type="button" id="panier" tabIndex="-1">
+                <button
+                  type="button"
+                  id="panier"
+                  tabIndex="-1"
+                  // onClick={() => {
+                  //   addToCart(selectedProduct)
+                  // }}
+                >
                   <svg
                     viewBox="0 0 16 16"
                     className="bi bi-cart-check"

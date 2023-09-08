@@ -16,6 +16,7 @@ router.get("/survivalItems/:id", SurvivalItemsControllers.read)
 router.post("/users", UsersControllers.add)
 router.get("/users", UsersControllers.browse)
 router.get("/users/:id", UsersControllers.read)
+router.put("/users/:id", UsersControllers.edit)
 
 router.get("/objectsByPlanet/:id", objectController.getObjectsByPlanet)
 

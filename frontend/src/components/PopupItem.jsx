@@ -1,9 +1,13 @@
+import { useContext } from "react"
+import myContext from "./useContext"
 import PoidsLogo from "../../src/assets/images/poids.png"
 import MateriauxLogo from "../../src/assets/images/materiaux.png"
 import DurablityLogo from "../../src/assets/images/durability.png"
 import CreditsLogo from "../../src/assets/images/piece-de-monnaie.png"
 
 export default function PopupItem(props) {
+  const { addToCart } = useContext(myContext)
+  // console.info(props)
   return (
     <div className="mainDisplayItem">
       <h2 tabIndex="0">{props.name}</h2>
@@ -39,7 +43,12 @@ export default function PopupItem(props) {
             </div>
           </div>
           <div className="buttonBuy">
-            <button className="button">
+            <button
+              className="button"
+              onClick={() => {
+                addToCart(props)
+              }}
+            >
               <svg
                 viewBox="0 0 16 16"
                 className="bi bi-cart-check"

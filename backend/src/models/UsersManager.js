@@ -14,7 +14,7 @@ class UsersManager extends AbstractManager {
 
   update(users) {
     return this.database.query(
-      `update ${this.table} set credits = ?, where id = ?`,
+      `UPDATE ${this.table} SET credits = ? WHERE id = ?`,
       [users.credits, users.id]
     )
   }
