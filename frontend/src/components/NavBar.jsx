@@ -17,13 +17,13 @@ function NavBar() {
         <img src={Logo} alt="Logo du site AstroShift" />
       </div>
       <div id="NavBarMenu">
-        <ScrollLink to="/" smooth={true} duration={300}>
+        <ScrollLink to="/accueil" smooth={true} duration={300}>
           <button
             type="button"
             aria-label="lien vers l'accueil"
             onClick={(e) => {
               e.preventDefault()
-              const headers = document.getElementById("/")
+              const headers = document.getElementById("accueil")
               if (headers) {
                 setTimeout(() => {
                   headers.focus()

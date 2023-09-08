@@ -1,10 +1,13 @@
 .StepsGlobal {
   display: flex;
-  margin: 20px;
+  padding: 20px;
   align-items: center;
   justify-content: center;
   height: 100vh;
   gap: 5%;
+  background-image: url(/Users/mehdyhertereau/Documents/DEV-2023/Hackathon_Accesibilite/frontend/src/assets/logo.svg);
+  background-repeat: no-repeat;
+  background-position: center;
   :focus {
     background: black;
     color: white;
@@ -15,33 +18,50 @@
   #ThirdColumns {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
     border-radius: 20px;
     background: #ffffff;
     box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
     padding: 10px;
     width: 100%;
-    height: 50%;
+    height: 80%;
+    gap: 5%;
     h2 {
       text-align: center;
-      font-size: 2.5rem;
+      // font-size: 2vw;
 
       &:focus {
         background: black;
         color: white;
         font-style: bold;
+        border-radius: 5px;
+        padding: 5px;
       }
     }
-    p {
-      text-align: justify;
-      font-size: 1.5rem;
-
-      font-style: normal;
-      &:focus {
-        background: black;
-        color: white;
-        font-weight: 900;
-        font-size: 1.5rem;
+    #underlineSteps {
+      width: 90%;
+      border-bottom: 1px solid #000;
+    }
+    #contentColumns {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      p {
+        text-align: justify;
+        // font-size: 1.5vw;
+        font-style: normal;
+        &:focus {
+          background: black;
+          color: white;
+          font-weight: 900;
+          border-radius: 5px;
+          padding: 5px;
+          // font-size: 1.5vw;
+        }
       }
     }
   }

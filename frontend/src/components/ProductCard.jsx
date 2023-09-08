@@ -1,26 +1,29 @@
 import PopupItem from "../components/PopupItem"
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect } from "react"
 // import myContext from "./useContext"
 import LogoCroix from "../assets/images/croix.png"
 
 export default function ProductCard({ selectedPlanet, objects }) {
   const [showPopup, setShowPopup] = useState(false)
   const [selectedProduct, setSelectedProduct] = useState("")
-  const buttonRef = useRef(null)
-  // const { addToCart } = useContext(myContext)
 
   const handleCloseEscape = (event) => {
     if (event.key === "Escape") {
       setShowPopup(false)
+      const terraNova = document.getElementById("productCard")
+      terraNova.focus()
     }
   }
+  const handleCardClick = (object) => {
+    setSelectedProduct(object)
+    setShowPopup(true)
 
-  // console.info(selectedProduct)
-
-  const handleKeyPressEnter = (event) => {
-    if (event.key === "Enter") {
-      buttonRef.current.click()
-    }
+    requestAnimationFrame(() => {
+      const cardItem = document.getElementById("cardItem")
+      if (cardItem) {
+        cardItem.focus()
+      }
+    })
   }
 
   useEffect(() => {
@@ -32,16 +35,24 @@ export default function ProductCard({ selectedPlanet, objects }) {
 
   return (
     <>
-      <div className="cardsContainer">
+      <div
+        className="cardsContainer"
+        id="productCard"
+        aria-label="présentation des produits disponible pour cette planète"
+        tabIndex="0"
+      >
         {selectedPlanet &&
           objects.map((object) => (
             <div
               className="divCardMain"
               key={object.id}
-              onClick={() => {
-                setSelectedProduct(object)
-                setShowPopup(true)
+              onClick={() => handleCardClick(object)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter") {
+                  handleCardClick(object)
+                }
               }}
+              tabIndex="0"
             >
               <div className="divProductImage">
                 <img
@@ -50,21 +61,7 @@ export default function ProductCard({ selectedPlanet, objects }) {
                 />
               </div>
               <div className="divProductDescription">
-                <h2
-                  ref={buttonRef}
-                  onKeyDown={handleKeyPressEnter}
-                  tabIndex="0"
-                  onClick={() => {
-                    const cardItem = document.getElementById("cardItem")
-                    if (cardItem) {
-                      setTimeout(() => {
-                        cardItem.focus()
-                      }, 10)
-                    }
-                  }}
-                >
-                  {object.nom}
-                </h2>
+                <h2>{object.nom}</h2>
               </div>
               <div className="divButtonBasket">
                 <button
@@ -92,17 +89,16 @@ export default function ProductCard({ selectedPlanet, objects }) {
             </div>
           ))}
         {showPopup && (
-          <div className="divPopup">
+          <div className="divPopup" tabIndex="0" aria-label="Fermer la fenêtre">
             <div
               className="croix"
               onClick={() => {
                 setSelectedProduct(null)
                 setShowPopup(false)
               }}
-              tabIndex="0"
             >
               <button className="fermer" type="button">
-                <img src={LogoCroix} alt="" />
+                <img src={LogoCroix} alt="Une croix pour fermer la fenêtre" />
                 FERMER
               </button>
             </div>

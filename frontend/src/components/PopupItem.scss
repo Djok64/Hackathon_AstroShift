@@ -49,14 +49,11 @@
         align-items: center;
         flex-direction: column;
         gap: 6vh;
-
         h2 {
           font-size: 50px;
-          font-family: "KoHo", sans-serif;
         }
         p {
           font-size: 30px;
-          font-family: "KoHo", sans-serif;
         }
       }
       .specsItem {
@@ -70,21 +67,19 @@
         .divPrice,
         .divPoids,
         .divDurability {
+          height: 100%;
+          width: 80%;
           display: flex;
           justify-content: start;
           align-items: center;
-          height: 100%;
-          width: 60%;
-          border-bottom: 1px solid black;
+          border-bottom: 2px solid black;
           img {
-            margin-left: 100px;
-            width: 50px;
+            margin: 0 50px 0 100px;
+            width: 40px;
             height: auto;
           }
           p {
-            margin-left: 40px;
-            font-size: 25px;
-            font-family: "KoHo", sans-serif;
+            font-size: 24px;
           }
         }
       }
@@ -113,7 +108,7 @@
         .button .text {
           color: white;
           font-weight: 700;
-          font-size: 1em;
+          font-size: 20px;
           transition: 400ms;
         }
 

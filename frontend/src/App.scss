@@ -45,16 +45,22 @@
 /* Définition de la police pour la classe dyslexic-font */
 .dyslexic-font {
   font-family: "OpenDyslexic", sans-serif; /* Remplacez par votre police spéciale */
+  font-size: 1.1vw;
+  color: rgb(71, 70, 70);
 }
 
 /* Styles spécifiques pour les boutons dans la classe dyslexic-font */
 .dyslexic-font button {
   font-family: "OpenDyslexic", sans-serif; /* Remplacez par votre police spéciale */
+  font-size: 1.1vw;
+  color: rgb(71, 70, 70);
 }
 
 /* Styles spécifiques pour les champs de saisie dans la classe dyslexic-font */
 .dyslexic-font input {
   font-family: "OpenDyslexic", sans-serif; /* Remplacez par votre police spéciale */
+  font-size: 1.1vw;
+  color: rgb(71, 70, 70);
 }
 
 /* Styles globaux pour la police classique (classicFont) */
@@ -63,11 +69,22 @@
 /* Styles spécifiques pour les boutons dans la police classique (classicFont) */
 .classicFont button {
   font-family: "Times New Roman", Times, serif;
+  font-size: 1.5vw;
+  color: rgb(71, 70, 70);
+}
+
+/* Styles spécifiques pour les boutons dans la police classique (classicFont) */
+.classicFont {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.5vw;
+  color: rgb(71, 70, 70);
 }
 
 /* Styles spécifiques pour les champs de saisie dans la police classique (classicFont) */
 .classicFont input {
   font-family: "Times New Roman", Times, serif;
+  font-size: 1.5vw;
+  color: rgb(71, 70, 70);
 }
 
 /* ... Autres styles globaux ... */
