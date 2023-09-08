@@ -29,6 +29,9 @@ function Home() {
       <Element name="/solarSystem">
         <SystemeSolaire />
       </Element>
+      <div className="newEra">
+        <h1>"Le début d'une nouvelle ère..."</h1>
+      </div>
       <Element name="/selectPlanet">
         <SelectPlanet />
       </Element>
