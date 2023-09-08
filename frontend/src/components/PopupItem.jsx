@@ -14,22 +14,24 @@ export default function PopupItem(props) {
             alt="imageItem"
           />
         </div>
-        <div className="otherDiv" id="cardItem" tabIndex="0">
+        <div className="otherDiv">
           <div className="descriptionItem">
-            <p tabIndex="0">{props.description}</p>
+            <p tabIndex="0" id="cardItem">
+              {props.description}
+            </p>
           </div>
           <div className="specsItem">
             <div className="divPoids">
-              <img src={PoidsLogo} alt="" />
-              <p tabIndex="0">{props.poids} Kg</p>
+              <img src={PoidsLogo} alt="Logo d'un poids" />
+              <p tabIndex="0">{props.poids} kilogrammes</p>
             </div>
             <div className="divMateriaux">
               <img src={MateriauxLogo} alt="" />
-              <p tabIndex="0">{props.materiaux}</p>
+              <p tabIndex="0">Fabriqué en {props.materiaux}</p>
             </div>
             <div className="divDurability">
               <img src={DurablityLogo} alt="" />
-              <p tabIndex="0">{props.durability}</p>
+              <p tabIndex="0">Durabilité {props.durability}</p>
             </div>
             <div className="divPoids">
               <img src={CreditsLogo} alt="" />

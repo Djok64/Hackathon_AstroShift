@@ -5,7 +5,7 @@ import Steps from "../components/Steps"
 import Basket from "../components/Basket"
 import SystemeSolaire from "../components/SystemeSolaire"
 import SelectPlanet from "../components/SelectPlanet"
-import Header from "../components/header"
+import Header from "../components/Header"
 
 function Home() {
   const { basketPopup } = useContext(myContext)
@@ -20,7 +20,7 @@ function Home() {
 
   return (
     <>
-      <Element name="/">
+      <Element name="/accueil">
         <Header />
       </Element>
       <Element name="/presentation">
@@ -29,6 +29,9 @@ function Home() {
       <Element name="/solarSystem">
         <SystemeSolaire />
       </Element>
+      <div className="newEra">
+        <h1 tabIndex="0">"Le début d'une nouvelle ère..."</h1>
+      </div>
       <Element name="/selectPlanet">
         <div className="selectPlanet">
           <SelectPlanet />
