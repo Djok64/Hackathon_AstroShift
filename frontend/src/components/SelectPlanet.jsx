@@ -61,9 +61,6 @@ export default function SelectPlanet() {
                   e.preventDefault()
                   setSelectedPlanet(1)
                   const terraNova = document.getElementById("productCard")
-                  if (selectedPlanet !== null) {
-                    setSelectedPlanet(null)
-                  }
                   if (terraNova) {
                     setTimeout(() => {
                       terraNova.focus()
@@ -96,9 +93,6 @@ export default function SelectPlanet() {
                   e.preventDefault()
                   setSelectedPlanet(2)
                   const Pyrotopia = document.getElementById("productCard")
-                  if (selectedPlanet !== null) {
-                    setSelectedPlanet(null)
-                  }
                   if (Pyrotopia) {
                     setTimeout(() => {
                       Pyrotopia.focus()
@@ -132,9 +126,6 @@ export default function SelectPlanet() {
                   e.preventDefault()
                   setSelectedPlanet(3)
                   const Glaciara = document.getElementById("productCard")
-                  if (selectedPlanet !== null) {
-                    setSelectedPlanet(null)
-                  }
                   if (Glaciara) {
                     setTimeout(() => {
                       Glaciara.focus()
@@ -166,9 +157,6 @@ export default function SelectPlanet() {
                   e.preventDefault()
                   setSelectedPlanet(4)
                   const Terraria = document.getElementById("productCard")
-                  if (selectedPlanet !== null) {
-                    setSelectedPlanet(null)
-                  }
                   if (Terraria) {
                     setTimeout(() => {
                       Terraria.focus()
@@ -191,6 +179,11 @@ export default function SelectPlanet() {
         tabIndex="0"
       >
         <ProductCard selectedPlanet={selectedPlanet} objects={objects} />
+      </div>
+      <div className="valideBasket">
+        <button type="button" tabIndex="0">
+          Valider votre panier
+        </button>
       </div>
     </>
   )

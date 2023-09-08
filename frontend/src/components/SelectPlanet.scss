@@ -289,6 +289,12 @@
     }
   }
 }
+.valideBasket {
+  background-color: rgb(233, 233, 233);
+  button {
+    opacity: 0;
+  }
+}
 
 .boxImageNTitle {
   height: 300px;
