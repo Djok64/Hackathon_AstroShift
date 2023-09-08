@@ -1,4 +1,3 @@
-// import axios from "axios"
 import PopupItem from "../components/PopupItem"
 import { useState, useEffect, useRef } from "react"
 import LogoCroix from "../assets/images/croix.png"
@@ -7,15 +6,6 @@ export default function ProductCard({ selectedPlanet, objects }) {
   const [showPopup, setShowPopup] = useState(false)
   const [selectedProduct, setSelectedProduct] = useState("")
   const buttonRef = useRef(null)
-  // const [productInfos, setProductInfos] = useState(null)
-
-  // useEffect(() => {
-  //   axios
-  //     .get(`${import.meta.env.VITE_BACKEND_URL}/survivalItems`)
-  //     .then((res) => {
-  //       setProductInfos(res.data).catch((err) => console.info(err))
-  //     })
-  // }, [])
 
   const handleCloseEscape = (event) => {
     if (event.key === "Escape") {
@@ -61,6 +51,14 @@ export default function ProductCard({ selectedPlanet, objects }) {
                   ref={buttonRef}
                   onKeyDown={handleKeyPressEnter}
                   tabIndex="0"
+                  onClick={() => {
+                    const cardItem = document.getElementById("cardItem")
+                    if (cardItem) {
+                      setTimeout(() => {
+                        cardItem.focus()
+                      }, 10)
+                    }
+                  }}
                 >
                   {object.nom}
                 </h2>
@@ -95,6 +93,7 @@ export default function ProductCard({ selectedPlanet, objects }) {
             >
               <img src={LogoCroix} alt="Close" />
             </div>
+
             <PopupItem
               name={selectedProduct.nom}
               description={selectedProduct.description}
